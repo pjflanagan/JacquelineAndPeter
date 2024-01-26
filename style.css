@@ -1,4 +1,5 @@
 
+
 html, body {
   margin: 0;
   height: 100vh;
@@ -6,7 +7,6 @@ html, body {
 }
 
 section {
-  width: 100vw;
   min-height: 100vh;
 }
 
@@ -36,28 +36,42 @@ p {
   height: 100%;
 }
 
-.slideshow {
-  width: 64%;
+.content .slideshow {
+  width: 54%;
   height: 100%;
-  background: #7a0303
+  background: #7a0303;
+  color: #fff;
 }
 
-.sidebar {
-  width: 36%;
+.content .slideshow .title h1 {
+  font-family: 'Meow Script', cursive;
+}
+
+.content .sidebar {
+  width: 46%;
   height: 100%;
   overflow-y: scroll;
+  padding: 24px;
+}
+
+@media screen and (max-width: 640px)  {
+  .content {
+    flex-wrap: wrap;
+  }
+  
+  .content .slideshow {
+    width: 100%;
+    height: 54%;
+  }
+
+  .content .sidebar {
+    width: 100%;
+    height: auto;
+  }
 }
 
 section#intro {
 
-}
-
-section#intro .title {
-}
-
-section#intro .title h1 {
-  color: #fff;
-  text-align: center;
 }
 
 section#our-story {
