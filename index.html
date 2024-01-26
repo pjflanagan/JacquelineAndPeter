@@ -1,12 +1,15 @@
 <html>
   <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
     <link rel="stylesheet" href="./style.css" />
     <title>Jacqueline & Peter</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Sacramento&display=swap" rel="stylesheet">
+    
     <script src=
       "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
@@ -16,55 +19,96 @@
       <div class="slideshow">
         <div class="title">
           <h1>Jacqueline & Peter</h1>
-          <p>Come celebrate with us</p>
+          <h4>Come celebrate with us!</h4>
         </div>
       </div>
       <div class="sidebar">
+        <!-- Intro -->
         <section id="intro">
-          <h2></h2>
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">favorite</span>
+          </div>
+          <h2>This summer</h2>
           <p></p>
         </section>
+        <!-- Story -->
         <section id="our-story">
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">menu_book</span>
+          </div>
           <h2>Our Story</h2>
           <div class="timeline-event">
-            <h3>A chance encounter</h3>
-            <p></p>
+            <span class="slideshow-marker" data-slideshow="img-url-1">
+              <h3>A chance encounter</h3>
+            </span>
+            <p>
+              Jackie and Peter met while Jackie was on vacation in New York. 
+              Overcome with boredom, Jackie went on a dating app to kill time
+              one evening. Peter, having found no luck on the usual apps, was
+              giving Bounce a try for the first time. The couple went on two dates during 
+              her vacation, Bounce wen't on to be a commercial failure, and was removed
+              from the app store a year and a half later.
+            </p>
           </div>
           <div id="timeline-event">
-            <h3>Distance makes the heart grow stronger</h3>
-            <p></p>
+            <span class="slideshow-marker" data-slideshow="img-url-1">
+              <h3>Distance makes the heart grow stronger</h3>
+            </span>
+            <p>
+              Over the next two years, Jackie and Peter flew around the world to see
+              each other. Our third date was in Paris, a fourth in London.
+            </p>
           </div>
           <div class="timeline-event">
             <h3>Our life together</h3>
-            <p></p>
+            <p>
+              A year and a half ago Jackie and Peter eloped!
+            </p>
           </div>
         </section>
+        <!-- Event -->
         <section id="event-description">
-          <h2>The Post Elopement Celebration</h2>
-          <p>In lui of a formal wedding ceremony, we will be ...</p>
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">celebration</span>
+          </div>
+          <h2>Our Celebration</h2>
+          <p>In lieu of a formal wedding ceremony, we will be ...</p>
         </section>
+        <!-- Dates -->
         <section id="tour-dates">
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">event</span>
+          </div>
           <h2>Tour Dates</h2>
+          <p>We will be making stops in all our favorite places!</p>
           <div class="tour-dates">
             <div class="tour-date">
-              <h3>New York, NY</h3>
-              <h4><span class="material-symbols-outlined">event</span>May 11th</h4>
-              <p></p>
+              <div class="tour-date-header">
+                <h3>New York City</h3>
+                <h4>May 11th</h4>
+              </div>
+              <p>Join us in New York at ___ where we will be ___. Afterwards we will be going to __.</p>
             </div>
             <div class="tour-date">
-              <h3>Las Vegas, NV</h3>
-              <h4>May 18th</h4>
-              <p></p>
+              <div class="tour-date-header">
+                <h3>Las Vegas</h3>
+                <h4>May 18th</h4>
+              </div>
+              <p>Join us in Las Vegas at ___ where we will be ___. Afterwards we will be going to __.</p>
             </div>
             <div class="tour-date">
-              <h3>Amsterdam, Netherlands</h3>
-              <h4>June</h4>
-              <p></p>
+              <div class="tour-date-header">
+                <h3>Amsterdam</h3>
+                <h4>June</h4>
+              </div>
+              <p>Join us in Amsterdam at ___ where we will be ___. Afterwards we will be going to __.</p>
             </div>
             <div class="tour-date">
-              <h3>Taipei, Taiwan</h3>
-              <h4>December</h4>
-              <p></p>
+              <div class="tour-date-header">
+                <h3>Taipei</h3>
+                <h4>December</h4>
+              </div>
+              <p>TBA</p>
             </div>
           </div>
         </section>

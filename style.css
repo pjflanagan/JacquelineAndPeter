@@ -1,34 +1,65 @@
 
+/* General UI */
 
 html, body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+}
+
+div {
+  box-sizing: border-box;
 }
 
 section {
-  min-height: 100vh;
+  padding: 36px;
 }
 
 h1 {
-  font-size: 52px;
+  margin: 0;
+  font-family: 'Sacramento', cursive;
+  font-size: 56px;
+}
+
+.icon-holder {
+  width: 100%;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.icon-holder .material-symbols-outlined {
+  font-size: 42px !important;
+  color: #941e1c;
 }
 
 h2 {
-
+  margin: 8px 0 24px;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 42px;
 }
 
 h3 {
-
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 h4 {
-
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 p {
-
+  font-size: 16px;
+  line-height: 26px;
+  margin: 16px 0 16px;
 }
+
+/* Main Container */
 
 .content {
   display: flex;
@@ -36,52 +67,117 @@ p {
   height: 100%;
 }
 
+/* Slideshow */
+
 .content .slideshow {
   width: 54%;
   height: 100%;
-  background: #7a0303;
   color: #fff;
+  background: url(./img/slideshow-engagement.jpg);
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0px 2px 21px #000;
 }
 
-.content .slideshow .title h1 {
-  font-family: 'Meow Script', cursive;
+.content .slideshow .title {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+  width: 100%;
+  padding: 38px;
+}
+
+.content .slideshow .title h4 {
+  margin: 8px;
 }
 
 .content .sidebar {
   width: 46%;
   height: 100%;
+  background: #ffeded;
   overflow-y: scroll;
-  padding: 24px;
+  box-shadow: 0 0 180px #0008;
 }
 
-@media screen and (max-width: 640px)  {
+/* Intro */
+
+section#intro {
+  height: 100vh;
+  background: #941e1c;
+  padding-top: 36%;
+  color: #ffffffe7;
+}
+
+section#intro .icon-holder .material-symbols-outlined {
+  color: #df9c2c !important;
+}
+
+/* Story */
+
+section#our-story {
+
+}
+
+/* Event */
+
+section#event-description {
+  background: #941e1c;
+  color: #ffffffe7;
+}
+
+section#event-description .icon-holder .material-symbols-outlined {
+  color: #df9c2c !important
+}
+
+/* Dates */
+
+section#tour-dates {
+
+}
+
+section#tour-dates .tour-dates .tour-date {
+  width: 100%;
+  margin: 22px 0;
+  background: #ffda99;
+  min-height: 120px;
+  padding: 28px;
+  border-radius: 4px;
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header {
+  width: 100%;
+  display: flex;
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header h3 {
+  width: 50%;
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header h4 {
+  width: 50%;
+  text-align: right;
+  color: #941e1c;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 748px)  {
   .content {
     flex-wrap: wrap;
   }
   
   .content .slideshow {
     width: 100%;
-    height: 54%;
   }
 
   .content .sidebar {
     width: 100%;
     height: auto;
   }
-}
 
-section#intro {
-
-}
-
-section#our-story {
-
-}
-
-section#event-description {
+  section#intro {
+    height: auto;
+    padding: 24% 0 24%;
+  }
   
-}
-
-section#tour-dates {
-
 }
