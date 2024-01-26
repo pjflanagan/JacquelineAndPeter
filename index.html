@@ -5,18 +5,20 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Jacqueline & Peter</title>
     
+    <!-- Google Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Sacramento&display=swap" rel="stylesheet">
     
-    <script src=
-      "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> -->
   </head>
   <body>
     <div class="content">
-      <div class="slideshow">
+      <div class="slideshow" id="slideshow">
         <div class="title">
           <h1>Jacqueline & Peter</h1>
           <h4>Come celebrate with us!</h4>
@@ -25,11 +27,12 @@
       <div class="sidebar">
         <!-- Intro -->
         <section id="intro">
-          <div class="icon-holder">
+          <div class="icon-holder slideshow-marker" data-slideshowImage="./img/intro_engagement.jpg">
             <span class="material-symbols-outlined">favorite</span>
           </div>
           <h2>This summer</h2>
           <p></p>
+          <div>Scroll down</div>
         </section>
         <!-- Story -->
         <section id="our-story">
@@ -37,10 +40,8 @@
             <span class="material-symbols-outlined">menu_book</span>
           </div>
           <h2>Our Story</h2>
-          <div class="timeline-event">
-            <span class="slideshow-marker" data-slideshow="img-url-1">
-              <h3>A chance encounter</h3>
-            </span>
+          <div class="timeline-event slideshow-marker" data-slideshowImage="./img/story_times-square.jpg">
+            <h3>A chance encounter</h3>
             <p>
               Jackie and Peter met while Jackie was on vacation in New York. 
               Overcome with boredom, Jackie went on a dating app to kill time
@@ -51,9 +52,7 @@
             </p>
           </div>
           <div id="timeline-event">
-            <span class="slideshow-marker" data-slideshow="img-url-1">
-              <h3>Distance makes the heart grow stronger</h3>
-            </span>
+            <h3>Distance makes the heart grow stronger</h3>
             <p>
               Over the next two years, Jackie and Peter flew around the world to see
               each other. Our third date was in Paris, a fourth in London.
@@ -87,7 +86,10 @@
                 <h3>New York City</h3>
                 <h4>May 11th</h4>
               </div>
-              <p>Join us in New York at ___ where we will be ___. Afterwards we will be going to __.</p>
+              <p>Join us in the city where we met. We will be having diner and drinks at ___. Afterwards we will be going to __.</p>
+              <a>
+                <div class="rsvp-button">RSVP</div>
+              </a>
             </div>
             <div class="tour-date">
               <div class="tour-date-header">
@@ -95,13 +97,19 @@
                 <h4>May 18th</h4>
               </div>
               <p>Join us in Las Vegas at ___ where we will be ___. Afterwards we will be going to __.</p>
+              <a>
+                <div class="rsvp-button">RSVP</div>
+              </a>
             </div>
             <div class="tour-date">
               <div class="tour-date-header">
                 <h3>Amsterdam</h3>
-                <h4>June</h4>
+                <h4>June 22nd</h4>
               </div>
               <p>Join us in Amsterdam at ___ where we will be ___. Afterwards we will be going to __.</p>
+              <a>
+                <div class="rsvp-button">RSVP</div>
+              </a>
             </div>
             <div class="tour-date">
               <div class="tour-date-header">

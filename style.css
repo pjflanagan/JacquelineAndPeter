@@ -1,4 +1,16 @@
 
+/* Variables */
+
+:root {
+  --gold: #ebae32;
+  --background-gold: #df9d2c88;
+  --red: #941e1c;
+  --background-light-red: #ffeded;
+  --white: #fff;
+  --black: #1c1c1c;
+  --off-white: #ffffffe7;
+}
+
 /* General UI */
 
 html, body {
@@ -31,7 +43,7 @@ h1 {
 
 .icon-holder .material-symbols-outlined {
   font-size: 42px !important;
-  color: #941e1c;
+  color: var(--red);
 }
 
 h2 {
@@ -72,11 +84,12 @@ p {
 .content .slideshow {
   width: 54%;
   height: 100%;
-  color: #fff;
-  background: url(./img/slideshow-engagement.jpg);
+  color: var(--white);
+  background-image: url(./img/intro_engagement.jpg);
   background-size: cover;
   background-position: center;
   text-shadow: 0px 2px 21px #000;
+  transition: background-image 0.4s;
 }
 
 .content .slideshow .title {
@@ -94,7 +107,7 @@ p {
 .content .sidebar {
   width: 46%;
   height: 100%;
-  background: #ffeded;
+  background: var(--background-light-red);
   overflow-y: scroll;
   box-shadow: 0 0 180px #0008;
 }
@@ -103,13 +116,13 @@ p {
 
 section#intro {
   height: 100vh;
-  background: #941e1c;
+  background: var(--red);
   padding-top: 36%;
-  color: #ffffffe7;
+  color: var(--white);
 }
 
 section#intro .icon-holder .material-symbols-outlined {
-  color: #df9c2c !important;
+  color: var(--gold) !important;
 }
 
 /* Story */
@@ -121,12 +134,12 @@ section#our-story {
 /* Event */
 
 section#event-description {
-  background: #941e1c;
-  color: #ffffffe7;
+  background: var(--gold);
+  color: var(--black);
 }
 
 section#event-description .icon-holder .material-symbols-outlined {
-  color: #df9c2c !important
+  color: var(--red) !important
 }
 
 /* Dates */
@@ -138,10 +151,11 @@ section#tour-dates {
 section#tour-dates .tour-dates .tour-date {
   width: 100%;
   margin: 22px 0;
-  background: #ffda99;
+  background: var(--red);
   min-height: 120px;
   padding: 28px;
   border-radius: 4px;
+  color: var(--white);
 }
 
 section#tour-dates .tour-dates .tour-date .tour-date-header {
@@ -151,13 +165,33 @@ section#tour-dates .tour-dates .tour-date .tour-date-header {
 
 section#tour-dates .tour-dates .tour-date .tour-date-header h3 {
   width: 50%;
+  color: var(--gold);
 }
 
 section#tour-dates .tour-dates .tour-date .tour-date-header h4 {
   width: 50%;
   text-align: right;
-  color: #941e1c;
+  color: var(--gold);
 }
+
+section#tour-dates .tour-dates .tour-date a .rsvp-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  padding: 14px 24px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  color: var(--gold);
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
+  background: var(--background-gold);
+}
+
 
 /* Mobile */
 
