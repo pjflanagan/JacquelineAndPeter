@@ -24,12 +24,13 @@
 
     // if we found a closest element, then set the background to what it says
     if (closestElement) {
-      const slideshowImage = $(closestElement).attr('data-slideshowImage');
-      $('#slideshow').css({
-        backgroundImage: `url(${slideshowImage})`,
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center'
-      })
+      const slide = $(closestElement).attr('data-slide');
+      $('.slideshow-image').css({
+        filter: `opacity(0)`
+      });
+      $(`.slideshow-image#${slide}`).css({
+        filter: `opacity(1)`
+      });
     }
 
   });
