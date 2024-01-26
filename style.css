@@ -142,10 +142,13 @@ p {
 /* Intro */
 
 section#intro {
-  height: 100vh;
+  height: calc(100vh - 40px);
   background: var(--red);
-  padding-top: 36%;
   color: var(--white);
+}
+
+section#intro .icon-holder {
+  margin: 36% 0 0;
 }
 
 section#intro .icon-holder .material-symbols-outlined {
@@ -177,7 +180,7 @@ section#tour-dates {
 
 section#tour-dates .tour-dates .tour-date {
   width: 100%;
-  margin: 22px 0;
+  margin: 24px 0;
   background: var(--red);
   min-height: 120px;
   padding: 28px;
