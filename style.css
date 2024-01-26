@@ -142,7 +142,7 @@ p {
 /* Intro */
 
 section#intro {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 72px);
   background: var(--red);
   color: var(--white);
 }
@@ -241,7 +241,10 @@ section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
 
   section#intro {
     height: auto;
-    padding: 24% 0 24%;
+    padding: 24% 36px 24%;
   }
   
+  section#intro .icon-holder {
+    margin: 0;
+  }
 }
