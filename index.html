@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Sacramento&display=swap" rel="stylesheet">
     
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -34,11 +34,11 @@
           <div class="slideshow-image" id="story_times-square"></div>
           <div class="slideshow-image" id="story_paris"></div>
           <div class="slideshow-image" id="story_covid"></div>
-          <div class="slideshow-image" id="story_wedding"></div>
+          <div class="slideshow-image" id="event_wedding"></div>
         </div>
         <div class="title">
           <h1>Jacqueline & Peter</h1>
-          <h4>Save the date(s)!</h4>
+          <h4>Celebrate with us!</h4>
         </div>
       </div>
       <div class="sidebar">
@@ -48,8 +48,11 @@
             <span class="material-symbols-outlined">favorite</span>
           </div>
           <h2>This summer...</h2>
-          <p></p>
-          <div>Scroll down</div>
+          <p>Jackie and Peter invite you to join them on their Post Elopement World Tour!</p>
+          <p>We will be having events in New York, Las Vegas, Amsterdam and Taipei.</p>
+          <div class="scroll-down" onclick="scrollToStory()">
+            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+          </div>
         </section>
         <section id="our-story">
           <div class="icon-holder">
@@ -71,7 +74,7 @@
             <h3>Distance makes the heart grow fonder</h3>
             <p>
               Over the next two years, Jackie and Peter flew around the world to see
-              each other. Our third date was in Paris, a fourth in London.
+              each other. A third date in Paris, a fourth in London.
             </p>
           </div>
           <div class="timeline-event slideshow-marker" data-slide="story_covid">
@@ -80,19 +83,19 @@
               During COVID we were fortunate enough to take advantage of working remote.
             </p>
           </div>
-          <div class="timeline-event slideshow-marker" data-slide="story_wedding">
+          <div class="timeline-event">
             <h3>Our life together</h3>
             <p>
               A year and a half ago Jackie and Peter eloped!
             </p>
           </div>
         </section>
-        <section id="event-description">
+        <section id="event-description" class="slideshow-marker" data-slide="event_wedding">
           <div class="icon-holder">
             <span class="material-symbols-outlined">celebration</span>
           </div>
           <h2>Our Celebration</h2>
-          <p>In lieu of a formal wedding ceremony, we will be ...</p>
+          <p>To celebrate our union, we will be hosting dinner in all of our favorite cities</p>
         </section>
         <section id="tour-dates">
           <div class="icon-holder">
@@ -106,7 +109,7 @@
                 <h3>New York City</h3>
                 <h4>May 11th</h4>
               </div>
-              <p>Join us in the city where we met. We will be having diner and drinks at ___. Afterwards we will be going to __.</p>
+              <p>Join us in the city where we met. We will be having diner, drinks, and an after party.</p>
               <a>
                 <div class="rsvp-button">RSVP</div>
               </a>
@@ -116,7 +119,7 @@
                 <h3>Las Vegas</h3>
                 <h4>May 18th</h4>
               </div>
-              <p>Join us in Las Vegas at ___ where we will be ___. Afterwards we will be going to __.</p>
+              <p>Join us in Las Vegas. We will have dinner and drinks, and afterwards we will be hitting the strip.</p>
               <a>
                 <div class="rsvp-button">RSVP</div>
               </a>
@@ -126,7 +129,7 @@
                 <h3>Amsterdam</h3>
                 <h4>June 22nd</h4>
               </div>
-              <p>Join us in Amsterdam at ___ where we will be ___. Afterwards we will be going to __.</p>
+              <p>Join us in Amsterdam to be wined and dined.</p>
               <a>
                 <div class="rsvp-button">RSVP</div>
               </a>
@@ -139,6 +142,9 @@
               <p>TBA</p>
             </div>
           </div>
+        </section>
+        <section id="footer">
+          
         </section>
       </div>
     </div>

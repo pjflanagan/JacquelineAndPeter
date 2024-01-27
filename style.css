@@ -5,6 +5,7 @@
   --gold: #ebae32;
   --background-gold: #df9d2c88;
   --red: #941e1c;
+  --dark-red: #4b0504;
   --background-light-red: #ffeded;
   --white: #fff;
   --black: #1c1c1c;
@@ -18,7 +19,7 @@ html, body {
   height: 100vh;
   width: 100vw;
   font-family: 'Inter', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 div {
@@ -118,7 +119,7 @@ p {
   width: 100%;
   height: 100%;
   filter: opacity(0);
-  transition: filter 0.4s;
+  transition: filter 0.4s, background 0.4s;
 }
 
 .content .slideshow .slideshow-images .slideshow-image#intro_engagement {
@@ -138,8 +139,8 @@ p {
   background-image: url(./img/story_covid.jpg);
 }
 
-.content .slideshow .slideshow-images .slideshow-image#story_wedding {
-  background-image: url(./img/story_wedding.jpg);
+.content .slideshow .slideshow-images .slideshow-image#event_wedding {
+  background-image: url(./img/event_wedding-2.jpg);
 }
 
 .content .sidebar {
@@ -157,6 +158,7 @@ section#intro {
   height: calc(100vh - 72px);
   background: var(--red);
   color: var(--white);
+  position: relative;
 }
 
 section#intro .icon-holder {
@@ -165,6 +167,31 @@ section#intro .icon-holder {
 
 section#intro .icon-holder .material-symbols-outlined {
   color: var(--gold) !important;
+}
+
+section#intro .scroll-down {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 24px 0;
+  border-radius: 30px;
+  background: #fff2;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+section#intro .scroll-down:hover {
+  background: #fff4;
+  transform: translate(-50%, 4px);
+}
+
+section#intro .scroll-down .material-symbols-outlined {
+  font-size: 38px !important;
+  line-height: 0px;
 }
 
 /* Story */
@@ -187,12 +214,16 @@ section#event-description .icon-holder .material-symbols-outlined {
 /* Dates */
 
 section#tour-dates {
+}
 
+section#tour-dates .tour-dates {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section#tour-dates .tour-dates .tour-date {
   width: 100%;
-  margin: 24px 0;
+  margin: 24px;
   background: var(--red);
   min-height: 120px;
   padding: 28px;
@@ -234,6 +265,14 @@ section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
   background: var(--background-gold);
 }
 
+/* Footer */
+
+section#footer {
+  border-top: 8px solid var(--gold);
+  background: var(--dark-red);
+  height: 18px;
+  margin-top: 42px;
+}
 
 /* Mobile */
 
@@ -254,6 +293,10 @@ section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
   section#intro {
     height: auto;
     padding: 24% 36px 24%;
+  }
+
+  section#intro .scroll-down {
+    visibility: hidden;
   }
   
   section#intro .icon-holder {

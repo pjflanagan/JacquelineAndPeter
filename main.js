@@ -1,4 +1,10 @@
 
+function scrollToStory() {
+  $('.sidebar').animate({
+    scrollTop: $('#our-story').offset().top
+  }, 800);
+}
+
 (function () {
   const PAGE_CENTER = $(window).innerHeight() / 2;
 
