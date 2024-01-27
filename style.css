@@ -8,6 +8,7 @@
   --dark-red: #4b0504;
   --background-light-red: #ffeded;
   --white: #fff;
+  --transparent-white: #fff2;
   --black: #1c1c1c;
   --off-white: #ffffffe7;
 }
@@ -88,7 +89,6 @@ p {
   height: 100%;
   color: var(--white);
   background: var(--black);
-  text-shadow: 0px 2px 21px #000;
   overflow: hidden;
 }
 
@@ -96,12 +96,24 @@ p {
   position: absolute;
   top: 100%;
   transform: translateY(-100%);
+  height: 50%;
   width: 100%;
   padding: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: flex-end;
+  background: #0003;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
 
 .content .slideshow .title h4 {
   margin: 8px;
+  width: 100%;
+}
+
+.content .slideshow .title p {
+  width: 100%;
 }
 
 .content .slideshow .slideshow-images {
@@ -143,6 +155,22 @@ p {
   background-image: url(./img/event_wedding-2.jpg);
 }
 
+.content .slideshow .slideshow-images .slideshow-image#date_new-york {
+  background-image: url(./img/date_new-york.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_las-vegas {
+  background-image: url(./img/date_las-vegas.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_amsterdam {
+  background-image: url(./img/date_amsterdam.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_taipei {
+  background-image: url(./img/date_taipei.jpg);
+}
+
 .content .sidebar {
   position: relative;
   width: 46%;
@@ -178,14 +206,14 @@ section#intro .scroll-down {
   height: 48px;
   padding: 24px 0;
   border-radius: 30px;
-  background: #fff2;
+  background: var(--transparent-white);
   text-align: center;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.4s, background 0.4s;
 }
 
 section#intro .scroll-down:hover {
-  background: #fff4;
+  background: var(--background-gold);
   transform: translate(-50%, 4px);
 }
 
@@ -193,6 +221,7 @@ section#intro .scroll-down .material-symbols-outlined {
   font-size: 38px !important;
   line-height: 0px;
 }
+
 
 /* Story */
 
