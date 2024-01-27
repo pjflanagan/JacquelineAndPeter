@@ -130,6 +130,18 @@ p {
   background-image: url(./img/story_times-square.jpg);
 }
 
+.content .slideshow .slideshow-images .slideshow-image#story_paris {
+  background-image: url(./img/story_paris.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#story_covid {
+  background-image: url(./img/story_covid.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#story_wedding {
+  background-image: url(./img/story_wedding.jpg);
+}
+
 .content .sidebar {
   position: relative;
   width: 46%;
