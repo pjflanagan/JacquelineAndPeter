@@ -3,6 +3,7 @@
 
 :root {
   --gold: #ebae32;
+  --gold-brighter: #f5cf53;
   --background-gold: #df9d2c88;
   --red: #941e1c;
   --dark-red: #4b0504;
@@ -56,7 +57,8 @@ h2 {
 }
 
 h3 {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 480px;
   font-size: 24px;
   font-weight: 400;
 }
@@ -68,9 +70,10 @@ h4 {
 }
 
 p {
+  margin: 8px auto 8px;
   font-size: 16px;
   line-height: 26px;
-  margin: 16px 0 16px;
+  max-width: 480px;
 }
 
 /* Main Container */
@@ -190,7 +193,7 @@ section#intro {
 }
 
 section#intro .icon-holder {
-  margin: 36% 0 0;
+  margin: 26% 0 0;
 }
 
 section#intro .icon-holder .material-symbols-outlined {
@@ -225,8 +228,8 @@ section#intro .scroll-down .material-symbols-outlined {
 
 /* Story */
 
-section#our-story {
-
+section#our-story .timeline-event {
+  margin: 34px 0;
 }
 
 /* Event */
@@ -251,11 +254,12 @@ section#tour-dates .tour-dates {
 }
 
 section#tour-dates .tour-dates .tour-date {
+  margin: 24px auto;
   width: 100%;
-  margin: 24px;
-  background: var(--red);
+  max-width: 446px;
   min-height: 120px;
   padding: 28px;
+  background: var(--red);
   border-radius: 4px;
   color: var(--white);
 }
@@ -292,6 +296,25 @@ section#tour-dates .tour-dates .tour-date a .rsvp-button {
 
 section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
   background: var(--background-gold);
+}
+
+.see-more-link {
+  opacity: 1;
+  color: var(--gold);
+  cursor: pointer;
+  transition: color 0.4s, opacity 0.8s;
+}
+
+.see-more-link:hover {
+  color: var(--gold-brighter);
+  text-decoration: underline;
+}
+
+.see-more {
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s;
 }
 
 /* Footer */

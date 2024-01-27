@@ -1,11 +1,25 @@
 
 function scrollToStory() {
   $('.sidebar').animate({
-    scrollTop: $('#our-story').offset().top
+    scrollTop: $('#our-story').offset().top - 80
   }, 800);
 }
 
+function seeMore(date) {
+  $(`#see-more_${date}`).css({
+    height: 'auto',
+    maxHeight: '800px',
+  });
+  $(`#see-more-link_${date}`).css({
+    opacity: 0,
+    pointerEvents: 'none'
+  });
+}
+
 (function () {
+
+  // Slideshow
+
   const PAGE_CENTER = $(window).innerHeight() / 2;
 
   $('.sidebar').on('scroll', () => {

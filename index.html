@@ -77,14 +77,16 @@
           <div class="timeline-event slideshow-marker" data-slide="story_paris">
             <h3>Distance makes the heart grow fonder</h3>
             <p>
-              Over the next two years, Jackie and Peter flew around the world to see
-              each other. A third date in Paris, a fourth in London.
+              Over the next two years, Jackie and Peter flew back and forth to see
+              each other. A third date in Paris, a fourth in London, a fifth in Denver.
             </p>
           </div>
           <div class="timeline-event slideshow-marker" data-slide="story_covid">
             <h3>Caught a break during COVID</h3>
             <p>
               During COVID we were fortunate enough to take advantage of working remote.
+              Peter lived with Jackie in London for four months, and in Taipei for two more.
+              Peter left his job before they got wise. 
             </p>
           </div>
           <div class="timeline-event">
@@ -113,7 +115,16 @@
                 <h3>New York City</h3>
                 <h4>May 11th</h4>
               </div>
-              <p>Join us in the city where we met. We will be having diner, drinks, and an after party.</p>
+              <p>
+                Join us in the city where we met. We will be having dinner and drinks at the __.
+              </p>
+              <div class="see-more" id="see-more_new-york">
+                <p>Come for a full weekend.</p>
+                <p>We recommend staying at the Yotel (near us) or with a friend or relative.</p>
+              </div>
+              <p class="see-more-link" id="see-more-link_new-york" onclick="seeMore('new-york')">
+                See more...
+              </p>
               <a>
                 <div class="rsvp-button">RSVP</div>
               </a>
@@ -123,7 +134,16 @@
                 <h3>Las Vegas</h3>
                 <h4>May 18th</h4>
               </div>
-              <p>Join us in Las Vegas. We will have dinner and drinks, and afterwards we will be hitting the strip.</p>
+              <p>
+                Join us in Las Vegas. We will have dinner and drinks in Summerlin, and afterwards we will be hitting the strip.
+              </p>
+              <div class="see-more" id="see-more_las-vegas">
+                <p>We recommend staying on the Strip with us, we love Caesar's Palace and the MGM Grand.</p>
+                <p>We will be going to the Red Rocks for photos leading up to the dinner.</p>
+              </div>
+              <p class="see-more-link" id="see-more-link_las-vegas" onclick="seeMore('las-vegas')">
+                See more...
+              </p>
               <a>
                 <div class="rsvp-button">RSVP</div>
               </a>
@@ -147,9 +167,8 @@
             </div>
           </div>
         </section>
-        <section id="footer">
-
-        </section>
+        <!-- <section id="faq"></section> -->
+        <section id="footer"></section>
       </div>
     </div>
     <script src="./main.js"></script>
