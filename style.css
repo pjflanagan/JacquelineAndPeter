@@ -76,6 +76,19 @@ p {
   max-width: 480px;
 }
 
+a {
+  box-shadow: inset 0 -6px var(--background-gold);
+  color: var(--gold);
+  font-weight: 400;
+  text-decoration: none;
+  transition: box-shadow 0.4s;
+}
+
+a:hover {
+  box-shadow: inset 0 -10px var(--background-gold);;
+  color: var(--gold-brighter);
+}
+
 /* Main Container */
 
 .content {
@@ -107,7 +120,7 @@ p {
   align-content: flex-end;
   align-items: flex-end;
   background: #0003;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(0deg, #000a 0%, #0000 100%);
 }
 
 .content .slideshow .title h4 {
@@ -186,17 +199,24 @@ p {
 /* Intro */
 
 section#intro {
-  height: calc(100vh - 72px);
+  position: relative;
+  height: 100vh;
+  padding: 0;
   background: var(--red);
   color: var(--white);
+}
+
+section#intro .intro-content {
   position: relative;
+  top: 50%;
+  transform: translateY(calc(-50% - 68px));
 }
 
-section#intro .icon-holder {
-  margin: 26% 0 0;
+section#intro .intro-content .icon-holder {
+  margin: 0 0 24px;
 }
 
-section#intro .icon-holder .material-symbols-outlined {
+section#intro .intro-content .icon-holder .material-symbols-outlined {
   color: var(--gold) !important;
 }
 
@@ -291,23 +311,28 @@ section#tour-dates .tour-dates .tour-date a .rsvp-button {
   color: var(--gold);
   font-weight: 400;
   cursor: pointer;
-  transition: background 0.4s;
+  transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
 section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
   background: var(--background-gold);
+  color: var(--gold-brighter);
+  border: 1px solid var(--gold-brighter);
 }
 
 .see-more-link {
   opacity: 1;
+  box-shadow: inset 0 -6px var(--background-gold);
   color: var(--gold);
+  font-weight: 400;
+  text-decoration: none;
+  transition: box-shadow 0.4s, color 0.4s, opacity 0.8s;
   cursor: pointer;
-  transition: color 0.4s, opacity 0.8s;
 }
 
 .see-more-link:hover {
+  box-shadow: inset 0 -10px var(--background-gold);
   color: var(--gold-brighter);
-  text-decoration: underline;
 }
 
 .see-more {
