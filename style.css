@@ -183,12 +183,12 @@ a:hover {
   background-image: url(./img/story_covid.jpg);
 }
 
-.content .slideshow .slideshow-images .slideshow-image#story_our-life {
-  background-image: url(./img/story_our-life.jpg);
+.content .slideshow .slideshow-images .slideshow-image#story_wedding {
+  background-image: url(./img/story_wedding.jpg);
 }
 
 .content .slideshow .slideshow-images .slideshow-image#event_wedding {
-  background-image: url(./img/event_wedding-2.jpg);
+  background-image: url(./img/event_wedding.jpg);
 }
 
 .content .slideshow .slideshow-images .slideshow-image#date_new-york {
@@ -275,6 +275,7 @@ section#our-story .timeline-event {
 /* Event */
 
 section#event-description {
+  padding-bottom: 72px;
   background: var(--gold);
   color: var(--black);
 }
