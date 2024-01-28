@@ -70,10 +70,26 @@ h4 {
 }
 
 p {
-  margin: 8px auto 8px;
+  margin: 0 auto;
+  padding: 12px 0 4px;
   font-size: 16px;
   line-height: 26px;
   max-width: 480px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 28px;
+}
+
+ul li {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 0 6px 8px;
+}
+
+ul li::marker {
+  color: var(--gold);
 }
 
 a {
@@ -165,6 +181,10 @@ a:hover {
 
 .content .slideshow .slideshow-images .slideshow-image#story_covid {
   background-image: url(./img/story_covid.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#story_our-life {
+  background-image: url(./img/story_our-life.jpg);
 }
 
 .content .slideshow .slideshow-images .slideshow-image#event_wedding {
@@ -298,10 +318,12 @@ section#tour-dates .tour-dates .tour-date .tour-date-header h4 {
   width: 50%;
   text-align: right;
   color: var(--gold);
+  font-weight: 200;
 }
 
 section#tour-dates .tour-dates .tour-date a .rsvp-button {
   position: relative;
+  margin-top: 12px;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
