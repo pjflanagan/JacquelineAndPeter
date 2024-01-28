@@ -23,8 +23,6 @@
     
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> -->
   </head>
   <body>
     <div class="content">
@@ -55,14 +53,16 @@
             </div>
             <h2>This summer...</h2>
             <p>
-              Jackie and Peter invite you to join them on their Post Elopement World Tour!
-
+              Jackie and Peter invite you to join them on their 2024 Post Elopement World Tour!
             </p>
             <p>
-              We will be having events in New York, Las Vegas, Amsterdam and Taipei.
+              The couple will be having events in <a onclick="scrollToId('tour-date_new-york')">New York</a>, 
+              <a onclick="scrollToId('tour-date_las-vegas')">Las Vegas</a>, 
+              <a onclick="scrollToId('tour-date_amsterdam')">Amsterdam</a> and 
+              <a onclick="scrollToId('tour-date_taipei')">Taipei</a>.
             </p>
           </div>
-          <div class="scroll-down" onclick="scrollToId('our-story')">
+          <div class="scroll-down" onclick="scrollToId('our-story_how-we-met')">
             <span class="material-symbols-outlined">keyboard_arrow_down</span>
           </div>
         </section>
@@ -71,14 +71,14 @@
             <span class="material-symbols-outlined">menu_book</span>
           </div>
           <h2>Our Story</h2>
-          <div class="timeline-event slideshow-marker" data-slide="story_times-square">
+          <div class="timeline-event slideshow-marker" data-slide="story_times-square" id="our-story_how-we-met">
             <h3>A chance encounter</h3>
             <p>
               Jackie met Peter while she was on vacation in New York. 
-              Overcome with boredom, Jackie went on a dating app to kill time
-              one evening. Having exhausted his monthly swipes on Tinder, Peter gave a new app, 
-              called Bounce, a try. The couple went on two dates during 
-              her vacation and kept in touch after she left. Bounce went on to be a commercial failure,
+              Lacking plans one evening, Jackie's friends suggested she try a dating app to kill time. 
+              Having exhausted his monthly swipes on Tinder, Peter gave a new app a try. 
+              The two downloaded Bounce, and went out that same evening. The couple went on two dates during 
+              Jackie's vacation and kept in touch after she left. Bounce went on to be a commercial failure,
               and was removed from the app store a year later.
             </p>
           </div>
@@ -87,8 +87,6 @@
             <p>
               Over the next two years, Jackie and Peter flew back and forth to see
               each other. A third date in Paris, a fourth in London, a fifth in Denver.
-              To his friends, Peter called himself Mr. Worldwide. In truth, he only had 
-              one hoe in different area codes.
             </p>
           </div>
           <div class="timeline-event slideshow-marker" data-slide="story_covid">
@@ -102,8 +100,8 @@
           <div class="timeline-event slideshow-marker" data-slide="story_wedding">
             <h3>Our wedding</h3>
             <p>
-              A year and a half ago Jackie and Peter eloped! The couple went to City Hall and 
-              had a small celebration.
+              In June 2022, Jackie and Peter eloped! The couple went to City Hall and 
+              had a small celebration in a nearby bar in Chinatown. 
             </p>
           </div>
         </section>
@@ -125,7 +123,7 @@
             Stay tuned for updates!
           </p>
           <div class="tour-dates">
-            <div class="tour-date slideshow-marker" data-slide="date_new-york">
+            <div class="tour-date slideshow-marker" data-slide="date_new-york" id="tour-date_new-york">
               <div class="tour-date-header">
                 <h3>New York City</h3>
                 <h4>May 11th</h4>
@@ -137,28 +135,31 @@
               </p>
               <div class="see-more" id="see-more_new-york">
                 <h4>Schedule</h4>
-                <h5>Friday</h5>
+                <h5>Friday, May 10th</h5>
                 <ul>
                   <li>
-                    We will be doing a food tour of Chinatown and Little Italy
+                    We will be doing a food tour of Chinatown and Little Italy OR we will be doing a boat ride.
                   </li>
                 </ul>
-                <h5>Saturday</h5>
+                <h5>Saturday, May 11th</h5>
                 <ul>
                   <li>
-                    The morning of the dinner we will be doing mini golf
+                    In the afternoon before dinner we will be doing mini golf on the pier in Williamsburg
                   </li>
                   <li>
-                    <b>6pm</b> - dinner we will be booking a Karaoke room
+                    <b>6pm</b> - dinner at Bar Harta
+                  </li>
+                  <li>
+                    After party - we will strolling over to K-Town for Karaoke
                   </li>
                 </ul>
                 <h4>Hotels</h4>
                 <p>
-                  We recommend staying at the Yotel (near us) or with a friend or relative.
+                  We recommend staying at the Yotel (near us), anywhere near Bryant Park, or with a friend or relative.
                 </p>
                 <h4>Other Attractions</h4>
                 <p>
-                  We enjoyed Hadestown and Six, if you see a matinee there will be enough time to make dinner.
+                  We enjoyed Hadestown and didn't like Six, if you see a matinee there will be enough time to make dinner.
                 </p>
               </div>
               <p>
@@ -166,12 +167,14 @@
                   See more &rarr;
                 </span>
               </p>
-              <a href="#" target="_blank">
-                <div class="rsvp-button">RSVP</div>
-              </a>
+              <div class="button-row">
+                <a href="#" target="_blank">
+                  <div class="rsvp-button">RSVP</div>
+                </a>
+              </div>
             </div>
             <hr />
-            <div class="tour-date slideshow-marker" data-slide="date_las-vegas">
+            <div class="tour-date slideshow-marker" data-slide="date_las-vegas" id="tour-date_las-vegas">
               <div class="tour-date-header">
                 <h3>Las Vegas</h3>
                 <h4>May 18th</h4>
@@ -182,39 +185,78 @@
                 in the Rampart Casino in Summerlin before hitting the strip.
               </p>
               <div class="see-more" id="see-more_las-vegas">
-                <p>
-                  We will be going to the Red Rocks for photos leading up to the dinner.
-                </p>
-                <p>
-                  We recommend staying either at the Rampart Casino (to be close to Lola and Lolo) or 
-                  with us on the Strip with us, we love Caesar's Palace and the MGM Grand.
-                </p>
+                <h4>Schedule</h4>
+                <h5>Friday, May 17th</h5>
+                <ul>
+                  <li>
+                    Hit the strip with us!
+                  </li>
+                </ul>
+                <h5>Saturday, May 18th</h5>
+                <ul>
+                  <li>
+                    In the morning we will be taking photos at Red Rocks State Park.
+                  </li>
+                  <li>
+                    <b>6pm</b> - Dinner at Jade.
+                  </li>
+                </ul>
+                <h4>Hotels</h4>
+                <ul>
+                  <li>
+                    We will be staying on the strip. We love Caesar's Palace and the MGM Grand.
+                  </li>
+                  <li>
+                    If you'd like to be closer to Lola and Lolo, we recommend the Red Rock Casino or the Rampart Casino
+                  </li>
+                </ul>
               </div>
               <p>
                 <span class="see-more-link" id="see-more-link_las-vegas" onclick="seeMore('las-vegas')">
                   See more &rarr;
                 </span>
               </p>
-              <a href="#" target="_blank">
-                <div class="rsvp-button">RSVP</div>
-              </a>
+              <div class="button-row">
+                <a href="#" target="_blank">
+                  <div class="rsvp-button">RSVP</div>
+                </a>
+              </div>
             </div>
             <hr />
-            <div class="tour-date slideshow-marker" data-slide="date_amsterdam">
+            <div class="tour-date slideshow-marker" data-slide="date_amsterdam" id="tour-date_amsterdam">
               <div class="tour-date-header">
                 <h3>Amsterdam</h3>
                 <h4>June 22nd</h4>
               </div>
               <p>
-                Join us in Amsterdam to be wined and dined.
+                Follow us to Amsterdam where we will enjoy wine, dinner, and the unique vocal stylings of Doja Cat.
               </p>
-              <br /><!-- This is to get the spacing right, remove if we add a "See more" -->
-              <a href="#" target="_blank">
-                <div class="rsvp-button">RSVP</div>
-              </a>
+              <div class="see-more" id="see-more_amsterdam">
+                <h4>Schedule</h4>
+                <h5>Wednesday, June 19th</h5>
+                <ul>
+                  <li>
+                    Doja Cat live at the Ziggo Dome.
+                  </li>
+                </ul>
+                <h5>Saturday, June 22nd</h5>
+                <p>
+                  To be announced!
+                </p>
+              </div>
+              <p>
+                <span class="see-more-link" id="see-more-link_amsterdam" onclick="seeMore('amsterdam')">
+                  See more &rarr;
+                </span>
+              </p>
+              <div class="button-row">
+                <a href="#" target="_blank">
+                  <div class="rsvp-button">RSVP</div>
+                </a>
+              </div>
             </div>
             <hr />
-            <div class="tour-date slideshow-marker" data-slide="date_taipei">
+            <div class="tour-date slideshow-marker" data-slide="date_taipei" id="tour-date_taipei">
               <div class="tour-date-header">
                 <h3>Taipei</h3>
                 <h4>December</h4>
@@ -222,7 +264,7 @@
               <p>
                 To be announced!
               </p>
-              <br />
+              <br /><!-- This is to get the spacing right, remove if we add a "See more" -->
             </div>
           </div>
         </section>
@@ -230,10 +272,14 @@
           <div class="icon-holder">
             <span class="material-symbols-outlined">chat</span>
           </div>
-          <h2>FAQs</h2>
+          <h2>Q & A</h2>
           <h3>Can I bring a +1?</h3>
           <p>
             Refer to your invitation email.
+          </p>
+          <h3>Can I bring my young kids?</h3>
+          <p>
+            Yes, but not to Karaoke.
           </p>
           <h3>Can I come to multiple events?</h3>
           <p>
@@ -242,6 +288,10 @@
           <h3>Do you have a registry?</h3>
           <p>
             Nah, we already have kitchen appliances and there's not enough room in our apartment for surround sound.
+          </p>
+          <h3>We still want to get you a gift.</h3>
+          <p>
+            That's so sweet!
           </p>
           <h3>This was kinda short notice.</h3>
           <p>

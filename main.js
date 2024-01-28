@@ -1,7 +1,8 @@
 
 function scrollToId(id) {
+  const PAGE_CENTER = $(window).innerHeight() / 2;
   $('.sidebar').animate({
-    scrollTop: $(`#${id}`).offset().top - 80
+    scrollTop: $(`#${id}`).offset().top - PAGE_CENTER + 80
   }, 800);
 }
 
