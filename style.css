@@ -65,8 +65,15 @@ h3 {
 
 h4 {
   margin: 0;
+  padding: 12px 0 4px;
   font-size: 18px;
   font-weight: 400;
+}
+
+h5 {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--gold);
 }
 
 p {
@@ -108,7 +115,6 @@ a:hover {
 /* Main Container */
 
 .content {
-  display: flex;
   width: 100%;
   height: 100%;
 }
@@ -117,7 +123,7 @@ a:hover {
 
 .content .slideshow {
   position: relative;
-  width: 54%;
+  width: calc(54% + 30px);
   height: 100%;
   color: var(--white);
   background: var(--black);
@@ -142,6 +148,7 @@ a:hover {
 .content .slideshow .title h4 {
   margin: 8px;
   width: 100%;
+  padding: 0;
 }
 
 .content .slideshow .title p {
@@ -208,12 +215,23 @@ a:hover {
 }
 
 .content .sidebar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 54%;
   width: 46%;
   height: 100%;
   background: var(--background-light-red);
   overflow-y: scroll;
   box-shadow: 0 0 180px #0008;
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 calc(50% + 14px),
+    18px 50%,
+    0 calc(50% - 14px),
+    0% 0%
+  );
 }
 
 /* Intro */
@@ -221,7 +239,7 @@ a:hover {
 section#intro {
   position: relative;
   height: 100vh;
-  padding: 0;
+  padding: 0 36px;
   background: var(--red);
   color: var(--white);
 }
@@ -297,7 +315,7 @@ section#tour-dates .tour-dates {
 section#tour-dates .tour-dates .tour-date {
   margin: 24px auto;
   width: 100%;
-  max-width: 446px;
+  max-width: 520px;
   min-height: 120px;
   padding: 28px;
   background: var(--red);
@@ -306,8 +324,10 @@ section#tour-dates .tour-dates .tour-date {
 }
 
 section#tour-dates .tour-dates .tour-date .tour-date-header {
-  width: 100%;
   display: flex;
+  width: 100%;
+  padding: 6px 0 18px;
+  border-bottom: 1px solid var(--gold);
 }
 
 section#tour-dates .tour-dates .tour-date .tour-date-header h3 {
@@ -317,6 +337,7 @@ section#tour-dates .tour-dates .tour-date .tour-date-header h3 {
 
 section#tour-dates .tour-dates .tour-date .tour-date-header h4 {
   width: 50%;
+  padding: 0;
   text-align: right;
   color: var(--gold);
   font-weight: 200;
@@ -376,8 +397,9 @@ section#footer {
 
 /* Mobile */
 
-@media screen and (max-width: 748px)  {
+@media screen and (max-width: 780px)  {
   .content {
+    display: flex;
     flex-wrap: wrap;
   }
   
@@ -386,13 +408,21 @@ section#footer {
   }
 
   .content .sidebar {
+    position: relative;
+    left: 0;
     width: 100%;
     height: auto;
+    clip-path: none;
   }
 
   section#intro {
     height: auto;
-    padding: 24% 36px 24%;
+    padding: 12% 36px 18%;
+  }
+
+  section#intro .intro-content {
+    top: 0;
+    transform: none;
   }
 
   section#intro .scroll-down {

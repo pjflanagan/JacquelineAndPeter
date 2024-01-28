@@ -1,14 +1,14 @@
 
-function scrollToStory() {
+function scrollToId(id) {
   $('.sidebar').animate({
-    scrollTop: $('#our-story').offset().top - 80
+    scrollTop: $(`#${id}`).offset().top - 80
   }, 800);
 }
 
 function seeMore(date) {
   $(`#see-more_${date}`).css({
     height: 'auto',
-    maxHeight: '800px',
+    maxHeight: '2000px', // if there is ever a cut off, then increase this
   });
   $(`#see-more-link_${date}`).css({
     opacity: 0,
