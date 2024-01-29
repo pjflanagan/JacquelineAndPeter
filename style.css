@@ -30,6 +30,7 @@ html, body {
   width: 100vw;
   font-family: 'Inter', sans-serif;
   font-weight: 200;
+  background: var(--dark-red);
 }
 
 div {
@@ -164,7 +165,7 @@ hr {
   width: calc(54% + 30px);
   height: 100%;
   color: var(--white);
-  background: var(--black);
+  background: var(--dark-red);
   overflow: hidden;
 }
 

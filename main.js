@@ -1,9 +1,18 @@
 
+const BREAKPOINT = 780;
+
 function scrollToId(id) {
   const PAGE_CENTER = $(window).innerHeight() / 2;
-  $('.sidebar').animate({
-    scrollTop: $(`#${id}`).offset().top - PAGE_CENTER + 80
-  }, 800);
+  const PAGE_WIDTH = $(window).innerWidth();
+  if (PAGE_WIDTH < BREAKPOINT) {
+    $('body').animate({
+      scrollTop: $(`#${id}`).offset().top - 80
+    }, 800);
+  } else {
+    $('.sidebar').animate({
+      scrollTop: $(`#${id}`).offset().top - PAGE_CENTER + 80
+    }, 800);
+  }
 }
 
 function seeMore(date) {
@@ -21,9 +30,10 @@ function seeMore(date) {
 
   // Slideshow
 
-  const PAGE_CENTER = $(window).innerHeight() / 2;
-
   $('.sidebar').on('scroll', () => {
+
+    const PAGE_CENTER = $(window).innerHeight() / 2;
+    
     let closestElementScrollDistance = Infinity;
     let closestElement;
 
@@ -53,6 +63,5 @@ function seeMore(date) {
         filter: `opacity(1)`
       });
     }
-
   });
 })();
