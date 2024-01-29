@@ -38,6 +38,8 @@
           <div class="slideshow-image" id="date_las-vegas"></div>
           <div class="slideshow-image" id="date_amsterdam"></div>
           <div class="slideshow-image" id="date_taipei"></div>
+          <div class="slideshow-image" id="qa_1"></div>
+          <div class="slideshow-image" id="qa_2"></div>
         </div>
         <div class="title">
           <h1>Jacqueline & Peter</h1>
@@ -107,8 +109,9 @@
           <div class="timeline-event slideshow-marker" data-slide="story_wedding">
             <h3>Our wedding</h3>
             <p>
-              In June 2022, Jackie and Peter eloped! The couple went to City Hall and 
-              had a small celebration in a nearby bar in Chinatown. 
+              In June 2022, Jackie and Peter tied the knot! The couple went to City Hall and 
+              had a small celebration in a nearby bar in Chinatown. To save money, they told the
+              bakery the cake was for a bar mitzvah.
             </p>
           </div>
         </section>
@@ -123,7 +126,7 @@
         </section>
         <section id="tour-dates">
           <div class="icon-holder">
-            <span class="material-symbols-outlined">event</span>
+            <span class="material-symbols-outlined">calendar_month</span>
           </div>
           <h2>Tour dates</h2>
           <p>
@@ -132,8 +135,19 @@
           <div class="tour-dates">
             <div class="tour-date slideshow-marker" data-slide="date_new-york" id="tour-date_new-york">
               <div class="tour-date-header">
-                <h3>New York City</h3>
-                <h4>May 11th</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>New York City</h3>
+                </div>
+                <!-- TODO: turn these into add to calendar links -->
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>May 11th</h4>
+                </div>
               </div>
               <p>
                 Join us in the city where we met. We will be having dinner and drinks 
@@ -176,15 +190,33 @@
               </p>
               <div class="button-row">
                 <a href="https://forms.gle/HFnGDeVPKNYL57gbA" target="_blank">
-                  <div class="rsvp-button">RSVP</div>
+                  <div class="rsvp-button">
+                    <span class="material-symbols-outlined">
+                      person_add
+                    </span>
+                    <span class="text">
+                      RSVP
+                    </span>
+                  </div>
                 </a>
               </div>
             </div>
             <hr />
             <div class="tour-date slideshow-marker" data-slide="date_las-vegas" id="tour-date_las-vegas">
               <div class="tour-date-header">
-                <h3>Las Vegas</h3>
-                <h4>May 18th</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>Las Vegas</h3>
+                </div>
+                <!-- TODO: turn these into add to calendar links -->
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>May 18th</h4>
+                </div>
               </div>
               <p>
                 Come find us in Las Vegas. We will have dinner and drinks at 
@@ -225,15 +257,33 @@
               </p>
               <div class="button-row">
                 <a href="#" target="_blank">
-                  <div class="rsvp-button">RSVP</div>
+                  <div class="rsvp-button">
+                    <span class="material-symbols-outlined">
+                      person_add
+                    </span>
+                    <span class="text">
+                      RSVP
+                    </span>
+                  </div>
                 </a>
               </div>
             </div>
             <hr />
             <div class="tour-date slideshow-marker" data-slide="date_amsterdam" id="tour-date_amsterdam">
               <div class="tour-date-header">
-                <h3>Amsterdam</h3>
-                <h4>June 22nd</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>Amsterdam</h3>
+                </div>
+                <!-- TODO: turn these into add to calendar links -->
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>June 22nd</h4>
+                </div>
               </div>
               <p>
                 Follow us to Amsterdam where we will enjoy wine, dinner, and the unique vocal stylings of Doja Cat.
@@ -247,9 +297,11 @@
                   </li>
                 </ul>
                 <h5>Saturday, June 22nd</h5>
-                <p>
-                  To be announced!
-                </p>
+                <ul>
+                  <li>
+                    To be announced!
+                  </li>
+                </ul>
               </div>
               <p>
                 <span class="see-more-link" id="see-more-link_amsterdam" onclick="seeMore('amsterdam')">
@@ -259,17 +311,23 @@
               <p style="text-align: center;margin-bottom: 12px;">
                 To <b>RSVP</b>, please message us directly.
               </p>
-              <!-- <div class="button-row">
-                <a href="#" target="_blank">
-                  <div class="rsvp-button">RSVP</div>
-                </a>
-              </div> -->
             </div>
             <hr />
             <div class="tour-date slideshow-marker" data-slide="date_taipei" id="tour-date_taipei">
               <div class="tour-date-header">
-                <h3>Taipei</h3>
-                <h4>December</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>Taipei</h3>
+                </div>
+                <!-- TODO: turn these into add to calendar links -->
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>December</h4>
+                </div>
               </div>
               <p>
                 To be announced!
@@ -282,7 +340,7 @@
           <div class="icon-holder">
             <span class="material-symbols-outlined">chat</span>
           </div>
-          <h2>Q & A</h2>
+          <h2 class="slideshow-marker" data-slide="qa_1">Q & A</h2>
           <h3>Can I bring a +1?</h3>
           <p>
             Refer to your invitation email.
@@ -291,7 +349,7 @@
           <p>
             Yes, but not to Karaoke.
           </p>
-          <h3>Can I come to multiple events?</h3>
+          <h3 class="slideshow-marker" data-slide="qa_2">Can I come to multiple events?</h3>
           <p>
             We recommend coming to the one you think you will have the most fun at.
           </p>
@@ -306,6 +364,17 @@
           <h3>This was kinda short notice.</h3>
           <p>
             Yeah, good luck.
+          </p>
+        </section>
+        <section id="contact">
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <h2>Contact us</h2>
+          <p>
+            Have any more questions? Feel free to send an email to
+            <a class="dark" href="mailto:pjflanagan1@gmail.com">pjflanagan1@gmail.com</a>, or give
+            Peter a call at <b class="dark" style="white-space: nowrap;">347-824-0488</b>.
           </p>
         </section>
         <section id="footer"></section>
