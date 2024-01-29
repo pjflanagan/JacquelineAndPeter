@@ -334,6 +334,8 @@ section#tour-dates .tour-dates .tour-date {
   min-height: 120px;
   padding: 28px;
   background: var(--red);
+  /* border: 7px solid var(--background-light-red);
+  outline: 1px solid var(--red); */
   border-radius: 4px;
   color: var(--white);
 }
@@ -411,7 +413,7 @@ section#tour-dates .tour-dates .tour-date .button-row a {
 section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button {
   width: fit-content;
   padding: 14px 24px;
-  border: 2px solid var(--red);
+  border: 3px solid var(--red);
   outline: 1px solid var(--gold);
   background: var(--gold);
   color: var(--dark-red);
