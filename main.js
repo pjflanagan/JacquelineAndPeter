@@ -26,8 +26,11 @@ function seeMore(date) {
   });
 }
 
+let slideshowType;
+
 let autoSlideshowInterval;
 function setAutoSlideshow() {
+  clearInterval(autoSlideshowInterval);
   let i = 1;
   const allSlides = $('.slideshow-image');
   autoSlideshowInterval = setInterval(() => {
@@ -82,10 +85,12 @@ function setScrollingSlideshow() {
 
 function setSlideshowTypeFromScreenSize() {
   const pageWidth = $(window).innerWidth();
-  if (pageWidth <= BREAKPOINT) {
+  if (pageWidth <= BREAKPOINT && slideshowType !== 'auto') {
+    slideshowType = 'auto';
     $('.sidebar').on('scroll', null);
     setAutoSlideshow();
-  } else {
+  } else if (pageWidth > BREAKPOINT && slideshowType !== 'scroll') {
+    slideshowType = 'scroll';
     clearInterval(autoSlideshowInterval);  
     setScrollingSlideshow();
   }
