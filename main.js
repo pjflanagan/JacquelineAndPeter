@@ -4,7 +4,7 @@ const BREAKPOINT = 780;
 function scrollToId(id) {
   const PAGE_CENTER = $(window).innerHeight() / 2;
   const PAGE_WIDTH = $(window).innerWidth();
-  if (PAGE_WIDTH < BREAKPOINT) {
+  if (PAGE_WIDTH <= BREAKPOINT) {
     $('body').animate({
       scrollTop: $(`#${id}`).offset().top - 80
     }, 800);
@@ -33,7 +33,7 @@ function seeMore(date) {
   $('.sidebar').on('scroll', () => {
 
     const PAGE_CENTER = $(window).innerHeight() / 2;
-    
+
     let closestElementScrollDistance = Infinity;
     let closestElement;
 

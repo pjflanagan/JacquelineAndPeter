@@ -8,6 +8,7 @@
   --red: #941e1c;
   --background-red: #65080721;
   --dark-red: #4b0504;
+  --darker-red: #340302;
   --background-light-red: #ffeded;
   --white: #fff;
   --transparent-white: #fff2;
@@ -30,7 +31,7 @@ html, body {
   width: 100vw;
   font-family: 'Inter', sans-serif;
   font-weight: 200;
-  background: var(--dark-red);
+  background: var(--darker-red);
 }
 
 div {
@@ -71,6 +72,7 @@ h3 {
   padding: 24px 0 0;
   font-size: 24px;
   font-weight: 400;
+  color: var(--red)
 }
 
 h4 {
@@ -125,7 +127,7 @@ a {
   color: var(--gold);
   font-weight: 400;
   text-decoration: none;
-  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, color 0.4s;
   cursor: pointer;
 }
 
@@ -507,6 +509,10 @@ section#footer {
   
   .content .slideshow {
     width: 100%;
+  }
+
+  .content .slideshow .slideshow-images .slideshow-image {
+    box-shadow: none;
   }
 
   .content .sidebar {
