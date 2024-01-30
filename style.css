@@ -297,11 +297,12 @@ section#intro {
 section#intro .intro-content {
   position: relative;
   top: 50%;
-  transform: translateY(calc(-50% - 68px));
+  transform: translateY(-50%);
 }
 
 section#intro .intro-content .icon-holder {
   margin: 0 0 24px;
+  padding: 0;
 }
 
 section#intro .intro-content .icon-holder .material-symbols-outlined {
@@ -525,7 +526,7 @@ section#footer {
 
   section#intro {
     height: auto;
-    padding: 12% 36px 18%;
+    padding: 14% 36px;
   }
 
   section#intro .intro-content {
@@ -539,5 +540,12 @@ section#footer {
   
   section#intro .icon-holder {
     margin: 0;
+  }
+}
+
+
+@media screen and (max-height: 612px)  {
+  section#intro .scroll-down {
+    visibility: hidden;
   }
 }
