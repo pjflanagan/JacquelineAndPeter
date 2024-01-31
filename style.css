@@ -5,6 +5,7 @@
   --gold: #ebae32;
   --gold-brighter: #f5cf53;
   --background-gold: #df9d2c45;
+  --background-gold-lighter: #e9c53677;
   --red: #941e1c;
   --background-red: #65080721;
   --dark-red: #4b0504;
@@ -472,19 +473,18 @@ section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button {
   display: flex;
   width: fit-content;
   padding: 14px 24px;
-  border: 3px solid var(--red);
-  outline: 1px solid var(--gold);
-  background: var(--gold);
-  color: var(--dark-red);
+  border: 3px solid var(--gold);
+  background: var(--background-gold);
+  color: var(--background-light-red);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
 section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button:hover {
-  background: var(--background-gold);
-  outline: 1px solid var(--gold-brighter);
-  color: var(--red);
+  background: var(--background-gold-lighter);
+  border: 3px solid var(--gold-brighter);
+  color: var(--white);
 }
 
 section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button .text {
@@ -542,7 +542,6 @@ section#footer {
     margin: 0;
   }
 }
-
 
 @media screen and (max-height: 612px)  {
   section#intro .scroll-down {
