@@ -310,6 +310,13 @@ section#intro .intro-content .icon-holder .material-symbols-outlined {
   color: var(--gold) !important;
 }
 
+section#intro .intro-content p.event-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
 section#intro .scroll-down {
   position: absolute;
   bottom: 54px;
