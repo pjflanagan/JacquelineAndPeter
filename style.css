@@ -3,12 +3,25 @@
 
 :root {
   --gold: #ebae32;
-  --background-gold: #df9d2c88;
+  --gold-brighter: #f5cf53;
+  --background-gold: #df9d2c45;
+  --background-gold-lighter: #e9c53677;
   --red: #941e1c;
+  --background-red: #65080721;
+  --dark-red: #4b0504;
+  --darker-red: #340302;
   --background-light-red: #ffeded;
   --white: #fff;
+  --transparent-white: #fff2;
   --black: #1c1c1c;
   --off-white: #ffffffe7;
+}
+
+::selection {
+  background: var(--background-gold);
+}
+::-moz-selection {
+  background: var(--background-gold);
 }
 
 /* General UI */
@@ -18,7 +31,8 @@ html, body {
   height: 100vh;
   width: 100vw;
   font-family: 'Inter', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
+  background: var(--darker-red);
 }
 
 div {
@@ -54,27 +68,95 @@ h2 {
 }
 
 h3 {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 24px 0 0;
   font-size: 24px;
   font-weight: 400;
+  color: var(--red)
 }
 
 h4 {
   margin: 0;
+  padding: 12px 0 4px;
   font-size: 18px;
   font-weight: 400;
 }
 
+h5 {
+  margin: 14px 0 6px;
+  font-size: 14px;
+  color: var(--gold);
+}
+
 p {
+  margin: 0 auto;
+  padding: 12px 0 4px;
   font-size: 16px;
   line-height: 26px;
-  margin: 16px 0 16px;
+  max-width: 480px;
+}
+
+b {
+  white-space: nowrap;
+  color: var(--gold);
+}
+
+b.dark {
+  color: var(--red);
+}
+
+ul {
+  margin: 4px 0 8px;
+  list-style: disc;
+  padding-left: 28px;
+}
+
+ul li {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 0 6px 8px;
+}
+
+ul li::marker {
+  color: var(--gold);
+}
+
+a {
+  white-space: nowrap;
+  box-shadow: inset 0 -6px var(--background-gold);
+  color: var(--gold);
+  font-weight: 400;
+  text-decoration: none;
+  transition: box-shadow 0.4s, color 0.4s;
+  cursor: pointer;
+}
+
+a.dark {
+  color: var(--red);
+  box-shadow: inset 0 -6px var(--background-red);
+}
+
+a:hover {
+  box-shadow: inset 0 -10px var(--background-gold);;
+  color: var(--gold-brighter);
+}
+
+a.dark:hover {
+  color: var(--dark-red);
+  box-shadow: inset 0 -10px var(--background-red);
+}
+
+hr {
+  width: 50%;
+  height: 1px;
+  background: var(--gold);
+  border: none;
 }
 
 /* Main Container */
 
 .content {
-  display: flex;
   width: 100%;
   height: 100%;
 }
@@ -83,11 +165,10 @@ p {
 
 .content .slideshow {
   position: relative;
-  width: 54%;
+  width: calc(54% + 30px);
   height: 100%;
   color: var(--white);
-  background: var(--black);
-  text-shadow: 0px 2px 21px #000;
+  background: var(--dark-red);
   overflow: hidden;
 }
 
@@ -95,12 +176,25 @@ p {
   position: absolute;
   top: 100%;
   transform: translateY(-100%);
+  height: 50%;
   width: 100%;
   padding: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: flex-end;
+  background: #0003;
+  background: linear-gradient(0deg, #000a 0%, #0000 100%);
 }
 
 .content .slideshow .title h4 {
   margin: 8px;
+  width: 100%;
+  padding: 0;
+}
+
+.content .slideshow .title p {
+  width: 100%;
 }
 
 .content .slideshow .slideshow-images {
@@ -118,7 +212,8 @@ p {
   width: 100%;
   height: 100%;
   filter: opacity(0);
-  transition: filter 0.4s;
+  box-shadow: inset -80px 0 90px #0004;
+  transition: filter 0.4s, background 0.4s;
 }
 
 .content .slideshow .slideshow-images .slideshow-image#intro_engagement {
@@ -130,40 +225,127 @@ p {
   background-image: url(./img/story_times-square.jpg);
 }
 
+.content .slideshow .slideshow-images .slideshow-image#story_paris {
+  background-image: url(./img/story_paris.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#story_work-remote {
+  background-image: url(./img/story_work-remote.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#story_wedding {
+  background-image: url(./img/story_wedding.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#event_wedding {
+  background-image: url(./img/event_wedding.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_new-york {
+  background-image: url(./img/date_new-york.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_las-vegas {
+  background-image: url(./img/date_las-vegas.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_amsterdam {
+  background-image: url(./img/date_amsterdam.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#date_taipei {
+  background-image: url(./img/date_taipei.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#qa_1 {
+  background-image: url(./img/qa_1.jpg);
+}
+
+.content .slideshow .slideshow-images .slideshow-image#qa_2 {
+  background-image: url(./img/qa_2.jpg);
+}
+
 .content .sidebar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 54%;
   width: 46%;
   height: 100%;
   background: var(--background-light-red);
   overflow-y: scroll;
   box-shadow: 0 0 180px #0008;
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 calc(50% + 14px),
+    18px 50%,
+    0 calc(50% - 14px),
+    0% 0%
+  );
 }
 
 /* Intro */
 
 section#intro {
-  height: calc(100vh - 72px);
+  position: relative;
+  height: 100vh;
+  padding: 0 36px;
   background: var(--red);
   color: var(--white);
 }
 
-section#intro .icon-holder {
-  margin: 36% 0 0;
+section#intro .intro-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-section#intro .icon-holder .material-symbols-outlined {
+section#intro .intro-content .icon-holder {
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+section#intro .intro-content .icon-holder .material-symbols-outlined {
   color: var(--gold) !important;
 }
 
+section#intro .scroll-down {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 24px 0;
+  border-radius: 30px;
+  background: var(--transparent-white);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s, background 0.4s;
+}
+
+section#intro .scroll-down:hover {
+  background: var(--background-gold);
+  transform: translate(-50%, 4px);
+}
+
+section#intro .scroll-down .material-symbols-outlined {
+  font-size: 38px !important;
+  line-height: 0px;
+}
+
+
 /* Story */
 
-section#our-story {
-
+section#our-story .timeline-event {
+  margin: 18px 0;
 }
 
 /* Event */
 
 section#event-description {
+  padding-bottom: 72px;
   background: var(--gold);
   color: var(--black);
 }
@@ -175,58 +357,154 @@ section#event-description .icon-holder .material-symbols-outlined {
 /* Dates */
 
 section#tour-dates {
+}
 
+section#tour-dates .tour-dates {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section#tour-dates .tour-dates .tour-date {
+  margin: 24px auto;
   width: 100%;
-  margin: 24px 0;
-  background: var(--red);
+  max-width: 520px;
   min-height: 120px;
   padding: 28px;
+  background: var(--red);
+  /* border: 7px solid var(--background-light-red);
+  outline: 1px solid var(--red); */
   border-radius: 4px;
   color: var(--white);
 }
 
 section#tour-dates .tour-dates .tour-date .tour-date-header {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 0;
+  /* border-bottom: 1px solid var(--gold); */
 }
 
-section#tour-dates .tour-dates .tour-date .tour-date-header h3 {
-  width: 50%;
+section#tour-dates .tour-dates .tour-date .tour-date-header .location {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 28px 12px 0;
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header .location .material-symbols-outlined {
+  padding: 3px 6px 0 0;
   color: var(--gold);
 }
 
-section#tour-dates .tour-dates .tour-date .tour-date-header h4 {
-  width: 50%;
+section#tour-dates .tour-dates .tour-date .tour-date-header .location h3 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: var(--white);
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header .date {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header .material-symbols-outlined {
+  color: var(--gold);
+}
+
+section#tour-dates .tour-dates .tour-date .tour-date-header .date h4 {
+  padding: 2px 0 0 6px;
   text-align: right;
-  color: var(--gold);
+  font-weight: 200;
+  color: var(--white);
 }
 
-section#tour-dates .tour-dates .tour-date a .rsvp-button {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  padding: 14px 24px;
-  border: 1px solid var(--gold);
-  border-radius: 4px;
+section#tour-dates .tour-dates .tour-date .see-more-link {
+  opacity: 1;
   color: var(--gold);
   font-weight: 400;
+  text-decoration: none;
+  transition: color 0.4s, opacity 0.8s;
   cursor: pointer;
-  transition: background 0.4s;
 }
 
-section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
+section#tour-dates .tour-dates .tour-date .see-more-link:hover {
+  color: var(--gold-brighter);
+}
+
+section#tour-dates .tour-dates .tour-date .see-more-link .text {
+  box-shadow: inset 0 -6px var(--background-gold);
+  transition: box-shadow 0.4s;
+}
+
+section#tour-dates .tour-dates .tour-date .see-more-link:hover .text {
+  box-shadow: inset 0 -10px var(--background-gold);
+}
+
+section#tour-dates .tour-dates .tour-date .see-more-link .spacer {
+  display: inline-block;
+  width: 6px;
+  transition: width 0.4s;
+}
+
+section#tour-dates .tour-dates .tour-date .see-more-link:hover .spacer {
+  width: 10px;
+}
+
+section#tour-dates .tour-dates .tour-date .see-more {
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s;
+}
+
+section#tour-dates .tour-dates .tour-date .button-row {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 18px;
+}
+
+section#tour-dates .tour-dates .tour-date .button-row a {
+  box-shadow: none;
+}
+
+section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button {
+  display: flex;
+  width: fit-content;
+  padding: 14px 24px;
+  border: 3px solid var(--gold);
   background: var(--background-gold);
+  color: var(--background-light-red);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
+section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button:hover {
+  background: var(--background-gold-lighter);
+  border: 3px solid var(--gold-brighter);
+  color: var(--white);
+}
+
+section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button .text {
+  padding: 3px 0 0 8px;
+}
+
+/* Footer */
+
+section#footer {
+  border-top: 8px solid var(--gold);
+  background: var(--dark-red);
+  height: 18px;
+  margin-top: 42px;
+}
 
 /* Mobile */
 
-@media screen and (max-width: 748px)  {
+@media screen and (max-width: 780px)  {
   .content {
+    display: flex;
     flex-wrap: wrap;
   }
   
@@ -234,17 +512,39 @@ section#tour-dates .tour-dates .tour-date a .rsvp-button:hover {
     width: 100%;
   }
 
+  .content .slideshow .slideshow-images .slideshow-image {
+    box-shadow: none;
+  }
+
   .content .sidebar {
+    position: relative;
+    left: 0;
     width: 100%;
     height: auto;
+    clip-path: none;
   }
 
   section#intro {
     height: auto;
-    padding: 24% 36px 24%;
+    padding: 14% 36px;
+  }
+
+  section#intro .intro-content {
+    top: 0;
+    transform: none;
+  }
+
+  section#intro .scroll-down {
+    visibility: hidden;
   }
   
   section#intro .icon-holder {
     margin: 0;
+  }
+}
+
+@media screen and (max-height: 612px)  {
+  section#intro .scroll-down {
+    visibility: hidden;
   }
 }

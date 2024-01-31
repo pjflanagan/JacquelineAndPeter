@@ -2,7 +2,7 @@
   <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css?cacheBreaker=20240131" />
     <title>Jacqueline & Peter</title>
 
     <!-- Social -->
@@ -19,12 +19,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Sacramento&display=swap" rel="stylesheet">
     
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> -->
   </head>
   <body>
     <div class="content">
@@ -32,57 +30,92 @@
         <div class="slideshow-images">
           <div class="slideshow-image" id="intro_engagement"></div>
           <div class="slideshow-image" id="story_times-square"></div>
+          <div class="slideshow-image" id="story_paris"></div>
+          <div class="slideshow-image" id="story_work-remote"></div>
+          <div class="slideshow-image" id="story_wedding"></div>
+          <div class="slideshow-image" id="event_wedding"></div>
+          <div class="slideshow-image" id="date_new-york"></div>
+          <div class="slideshow-image" id="date_las-vegas"></div>
+          <div class="slideshow-image" id="date_amsterdam"></div>
+          <div class="slideshow-image" id="date_taipei"></div>
+          <div class="slideshow-image" id="qa_1"></div>
+          <div class="slideshow-image" id="qa_2"></div>
         </div>
         <div class="title">
           <h1>Jacqueline & Peter</h1>
-          <h4>Save the date(s)!</h4>
+          <h4>Celebrate with us!</h4>
         </div>
       </div>
       <div class="sidebar">
         <!-- Intro -->
         <section id="intro">
-          <div class="icon-holder slideshow-marker" data-slide="intro_engagement">
-            <span class="material-symbols-outlined">favorite</span>
+          <div class="intro-content">
+            <div class="icon-holder slideshow-marker" data-slide="intro_engagement">
+              <span class="material-symbols-outlined">favorite</span>
+            </div>
+            <h2 style="margin-bottom: 8px;">You're invited</h2>
+            <p style="text-align: center;">
+              to Jacqueline and Peter's
+            </p>
+            <p style="text-align: center;font-size: 20px;">
+              <b>2024 Post Elopement World Tour!</b>
+            </p>
+            <hr style="margin: 36px auto 24px;background: #fff;" />
+            <p>
+              We're excited to see you at our events in 
+              <a onclick="scrollToId('tour-date_new-york')">New York</a> on May 11th, 
+              <a onclick="scrollToId('tour-date_las-vegas')">Las Vegas</a> on May 18th, 
+              <a onclick="scrollToId('tour-date_amsterdam')">Amsterdam</a> on June 22nd, and 
+              <a onclick="scrollToId('tour-date_taipei')">Taipei</a> in December.
+            </p>
           </div>
-          <h2>This summer...</h2>
-          <p>Jackie and Peter invite you to join them on their special day(s)!</p>
-          <p>We will be having events in New York on May 11th, Las Vegas on May 18th, Amsterdam on June 22nd and Taipei in December.</p>
-          <p>More details to come!</p>
-          <!-- <div>Scroll down</div> -->
+          <div class="scroll-down" onclick="scrollToId('our-story_how-we-met')">
+            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+          </div>
         </section>
-        <!-- <section id="our-story">
+        <section id="our-story">
           <div class="icon-holder">
             <span class="material-symbols-outlined">menu_book</span>
           </div>
-          <h2>Our Story</h2>
-          <div class="timeline-event slideshow-marker" data-slide="story_times-square">
+          <h2>Our story</h2>
+          <div class="timeline-event slideshow-marker" data-slide="story_times-square" id="our-story_how-we-met">
             <h3>A chance encounter</h3>
             <p>
-              Jackie and Peter met while Jackie was on vacation in New York. 
-              Overcome with boredom, Jackie went on a dating app to kill time
-              one evening. Peter, having found no luck on the usual apps, was
-              giving Bounce a try for the first time. The couple went on two dates during 
-              her vacation, Bounce wen't on to be a commercial failure, and was removed
-              from the app store a year and a half later.
+              Jackie met Peter on <b class="dark">May 18th, 2019</b> while she was on holiday in New York. 
+              Free of plans that evening, Jackie's friends suggested she use a dating app to kill time. 
+              Having exhausted his monthly swipes on Tinder, Peter was also willing to give a new app a try. 
+              They downloaded <a href="https://trybounce.com/" target="_blank" class="dark">Bounce</a>, swiped right,
+              and went out that same evening. The couple went on two dates during 
+              Jackie's vacation and kept in touch after she returned to London. Bounce went on to be a commercial failure,
+              and was removed from the app store a year later.
             </p>
           </div>
-          <div class="timeline-event">
-            <h3>Distance makes the heart grow stronger</h3>
+          <div class="timeline-event slideshow-marker" data-slide="story_paris">
+            <h3>Distance makes the heart grow fonder</h3>
             <p>
-              Over the next two years, Jackie and Peter flew around the world to see
-              each other. Our third date was in Paris, a fourth in London.
+              Over the next two years, Jackie and Peter flew back and forth to see
+              each other. A third date in Paris, a fourth in London, a fifth in Denver.
+              It was bliss upon every reunion, and heartbreak on each departure.
+              They say you're more likely to cry during an
+              <a href="https://www.imdb.com/title/tt6423362/" target="_blank" class="dark">in flight movie</a>, 
+              Peter will tell you the same.
             </p>
           </div>
-          <div class="timeline-event">
-            <h3>Caught a break during COVID</h3>
+          <div class="timeline-event slideshow-marker" data-slide="story_work-remote">
+            <h3>Caught a break</h3>
             <p>
-              During COVID we were fortunate enough to take advantage of working remote.
+              In 2020, the pair was fortunate enough to take advantage of working remote.
+              Peter lived with Jackie in London for four months, and in Taipei for another two.
+              In spring of 2021, the couple moved back to New York together after Jackie secured a work visa. 
+              Peter left his job before he could be reprimanded for six months of slacking off.
             </p>
           </div>
-          <div class="timeline-event">
-            <h3>Our life together</h3>
+          <div class="timeline-event slideshow-marker" data-slide="story_wedding">
+            <h3>Our wedding</h3>
             <p>
-              A year and a half ago Jackie and Peter eloped!
+              The couple vowed to never spend their lives separated by an ocean again. So,
+              on <b class="dark">June 3rd, 2022</b>, Jackie and Peter tied the knot! After City Hall, the couple 
+              celebrated with a few friends in a Chinatown bar nearby.
             </p>
           </div>
         </section>
@@ -90,57 +123,302 @@
           <div class="icon-holder">
             <span class="material-symbols-outlined">celebration</span>
           </div>
-          <h2>Our Celebration</h2>
-          <p>In lieu of a formal wedding ceremony, we will be ...</p>
+          <h2 class="slideshow-marker" data-slide="event_wedding">Our celebration</h2>
+          <p>
+            And now, we wish to celebrate our marriage with you! With family and friends spread far and wide, 
+            we decided we would bring the party to you. So this year, we will be
+            hosting events in four of our favorite cities. Find us at one near you!
+          </p>
         </section>
         <section id="tour-dates">
           <div class="icon-holder">
-            <span class="material-symbols-outlined">event</span>
+            <span class="material-symbols-outlined">calendar_month</span>
           </div>
-          <h2>Tour Dates</h2>
-          <p>We will be making stops in all our favorite places!</p>
+          <h2>Tour dates</h2>
+          <p>
+            Stay tuned for updates as our plans are being finalized!
+          </p>
           <div class="tour-dates">
-            <div class="tour-date">
+            <div class="tour-date slideshow-marker" data-slide="date_new-york" id="tour-date_new-york">
               <div class="tour-date-header">
-                <h3>New York City</h3>
-                <h4>May 11th</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>New York City</h3>
+                </div>
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>May 11th</h4>
+                </div>
               </div>
-              <p>Join us in the city where we met. We will be having diner and drinks at ___. Afterwards we will be going to __.</p>
-              <a>
-                <div class="rsvp-button">RSVP</div>
-              </a>
+              <p>
+                Join us in the city where we met. We will be having dinner and drinks before going out on the town.
+                <!-- We will be having dinner and drinks 
+                at <a href="https://www.hartanyc.com/" target="_blank">Bar Harta</a>
+                from <b>7pm to 10pm</b>. -->
+              </p>
+              <!-- <div class="see-more" id="see-more_new-york">
+                <h4>Schedule</h4>
+                <h5>Friday, May 10th</h5>
+                <ul>
+                  <li>TBA</li>
+                  <li>
+                    A walking food tour of Chinatown and Little Italy.
+                  </li>
+                  <li>
+                    A boat tour around Manhattan
+                  </li>
+                </ul>
+                <h5>Saturday, May 11th</h5>
+                <ul>
+                  <li>
+                    TBA
+                  </li>
+                  <li>
+                    <b>7pm</b> - Dinner at Bar Harta
+                  </li>
+                  <li>
+                    <b>10pm</b> - K-Town Karaoke after party
+                  </li>
+                </ul>
+                <h4>Accommodations</h4>
+                <ul>
+                  <li>
+                    The Grayson - where Bar Harta is located
+                  </li>
+                  <li>
+                    Yotel - near us
+                  </li>
+                  <li>
+                    Anywhere near Bryant Park
+                  </li>
+                </ul>
+                <h4>Other Attractions</h4>
+                <p>
+                  We enjoyed Hadestown and Little Shop of Horrors, if you see a matinee on Saturday there will be enough time to make dinner.
+                </p>
+              </div>
+              <p>
+                <span class="see-more-link" id="see-more-link_new-york" onclick="seeMore('new-york')">
+                  <span class="text">See more</span><span class="spacer"></span>&rarr;
+                </span>
+              </p> -->
+              <br /> <!-- FIXME: This is to get the spacing right, remove when we add a "See more" -->
+              <div class="button-row">
+                <a href="https://forms.gle/HFnGDeVPKNYL57gbA" target="_blank">
+                  <div class="rsvp-button">
+                    <span class="material-symbols-outlined">
+                      person_add
+                    </span>
+                    <span class="text">
+                      RSVP
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="tour-date">
+            <hr />
+            <div class="tour-date slideshow-marker" data-slide="date_las-vegas" id="tour-date_las-vegas">
               <div class="tour-date-header">
-                <h3>Las Vegas</h3>
-                <h4>May 18th</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>Las Vegas</h3>
+                </div>
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>May 18th</h4>
+                </div>
               </div>
-              <p>Join us in Las Vegas at ___ where we will be ___. Afterwards we will be going to __.</p>
-              <a>
-                <div class="rsvp-button">RSVP</div>
-              </a>
+              <p>
+                Find us in Las Vegas on the anniversary of our first date.
+                We will have dinner and drinks before hitting the strip!
+                <!-- at <a href="https://theresortatsummerlin.com/dining/fine-dining/jade-asian-kitchen-noodles/" target="_blank">Jade</a>
+                from <b>7pm to 10pm</b> in the Rampart Casino in Summerlin before hitting the strip. -->
+              </p>
+              <!-- <div class="see-more" id="see-more_las-vegas">
+                <h4>Schedule</h4>
+                <h5>Friday, May 17th</h5>
+                <ul>
+                  <li>
+                    TBA
+                  </li>
+                  <li>
+                    Hit the strip and/or see a show with us!
+                  </li>
+                </ul>
+                <h5>Saturday, May 18th</h5>
+                <ul>
+                  <li>
+                    In honor of Bounce, we will be going to the Trampoline Park.
+                  </li>
+                  <li>
+                    <b>Morning</b> - Photos at <a href="https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit" target="_blank">Red Rocks Canyon</a>.
+                  </li>
+                  <li>
+                    <b>7pm</b> - Dinner at Jade.
+                  </li>
+                  <li>
+                    <b>11pm</b> - Back to the strip for more fun!
+                  </li>
+                </ul>
+                <h4>Accommodations</h4>
+                <h5>On the strip</h5>
+                <ul>
+                  <li>
+                    We will be staying on the strip. We love Caesar's Palace and the MGM Grand.
+                  </li>
+                </ul>
+                <h5>Near Lola and Lolo</h5>
+                <ul>
+                  <li>
+                    <a href="https://www.redrockresort.com" target="_blank">Red Rock Casino</a>
+                  </li>
+                  <li>
+                    <a href="https://theresortatsummerlin.com" target="_blank">Rampart Casino</a> - where dinner will be hosted
+                  </li>
+                </ul>
+              </div>
+              <p>
+                <span class="see-more-link" id="see-more-link_las-vegas" onclick="seeMore('las-vegas')">
+                  <span class="text">See more</span><span class="spacer"></span>&rarr;
+                </span>
+              </p> -->
+              <br /> <!-- FIXME: This is to get the spacing right, remove when we add a "See more" -->
+              <div class="button-row">
+                <a href="https://forms.gle/LmznjLHMgfdyYD6R8" target="_blank">
+                  <div class="rsvp-button">
+                    <span class="material-symbols-outlined">
+                      person_add
+                    </span>
+                    <span class="text">
+                      RSVP
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="tour-date">
+            <hr />
+            <div class="tour-date slideshow-marker" data-slide="date_amsterdam" id="tour-date_amsterdam">
               <div class="tour-date-header">
-                <h3>Amsterdam</h3>
-                <h4>June 22nd</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>Amsterdam</h3>
+                </div>
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>June 22nd</h4>
+                </div>
               </div>
-              <p>Join us in Amsterdam at ___ where we will be ___. Afterwards we will be going to __.</p>
-              <a>
-                <div class="rsvp-button">RSVP</div>
-              </a>
+              <p>
+                Follow us to Amsterdam where we will enjoy wine, dinner, and the unique vocal stylings of Doja Cat.
+              </p>
+              <div class="see-more" id="see-more_amsterdam">
+                <h4>Schedule</h4>
+                <h5>Wednesday, June 19th</h5>
+                <ul>
+                  <li>
+                    <a href="https://www.youtube.com/watch?v=9Ko-nEYJ1GE" target="_blank">Doja Cat</a> live at
+                    the <a href="https://www.ziggodome.nl/en/event/7351408814/doja-cat" target="_blank">Ziggo Dome</a>.
+                  </li>
+                </ul>
+                <h5>Saturday, June 22nd</h5>
+                <ul>
+                  <li>
+                    To be announced!
+                  </li>
+                </ul>
+              </div>
+              <p>
+                <span class="see-more-link" id="see-more-link_amsterdam" onclick="seeMore('amsterdam')">
+                  <span class="text">See more</span><span class="spacer"></span>&rarr;
+                </span>
+              </p>
+              <p style="text-align: center;margin-bottom: 12px;">
+                To <b>RSVP</b>, please message us directly.
+              </p>
             </div>
-            <div class="tour-date">
+            <hr />
+            <div class="tour-date slideshow-marker" data-slide="date_taipei" id="tour-date_taipei">
               <div class="tour-date-header">
-                <h3>Taipei</h3>
-                <h4>December</h4>
+                <div class="location">
+                  <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <h3>Taipei</h3>
+                </div>
+                <div class="date">
+                  <span class="material-symbols-outlined">
+                    event
+                    </span>
+                  <h4>December</h4>
+                </div>
               </div>
-              <p>TBA</p>
+              <p>
+                Come with us to Jackie's hometown in Taiwan! More <b>details to come</b>.
+              </p>
+              <br /><!-- FIXME: This is to get the spacing right, remove if we add a "See more" -->
             </div>
           </div>
-        </section> -->
+        </section>
+        <section id="faq">
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">chat</span>
+          </div>
+          <h2 class="slideshow-marker" data-slide="qa_1">Q & A</h2>
+          <h3>Can I bring a +1?</h3>
+          <p>
+            Only if you consider it a serious relationship.
+          </p>
+          <h3>Can I bring my young kids?</h3>
+          <p>
+            Yes, but not to karaoke or the blackjack tables.
+          </p>
+          <h3>Can I come to multiple events?</h3>
+          <p>
+            We're very excited to see you, but recommend coming to the one you think you will have the most fun at.
+          </p>
+          <h3 class="slideshow-marker" data-slide="qa_2">What is the dress code?</h3>
+          <p>
+            Wine country casual, sport coats and sun dresses, yacht club initiation day.
+          </p>
+          <h3>Do you have a gift registry?</h3>
+          <p>
+            We do not have a registry, since there's no room in our apartment for new appliances.
+          </p>
+        </section>
+        <section id="contact">
+          <div class="icon-holder">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <h2>Contact us</h2>
+          <p>
+            Have any more questions? Feel free to send an email to
+            <a class="dark" href="mailto:pjflanagan1@gmail.com">pjflanagan1@gmail.com</a>, or give
+            Peter a call / WhatsApp at <b class="dark" style="white-space: nowrap;">+1 347-824-0488</b>.
+          </p>
+        </section>
+        <section id="footer"></section>
       </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="./main.js?cacheBreaker=20240131"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-CNFGV4ZHRG');
+    </script>
   </body>
 </html>
