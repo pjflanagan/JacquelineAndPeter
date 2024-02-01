@@ -4,13 +4,17 @@ const BREAKPOINT = 780;
 function scrollToId(id) {
   const pageCenterY = $(window).innerHeight() / 2;
   const pageWidth = $(window).innerWidth();
+  const elementOffsetTop = $(`#${id}`).offset().top;
+
   if (pageWidth <= BREAKPOINT) {
+    const currentBodyScrollDistance = $('.content').scrollTop();
     $('body').animate({
-      scrollTop: $(`#${id}`).offset().top - 80
+      scrollTop: currentBodyScrollDistance + elementOffsetTop - 80
     }, 800);
   } else {
+    const currentSidebarScrollDistance = $('.sidebar').scrollTop();
     $('.sidebar').animate({
-      scrollTop: $(`#${id}`).offset().top - pageCenterY + 80
+      scrollTop: currentSidebarScrollDistance + elementOffsetTop - pageCenterY + 80
     }, 800);
   }
 }
