@@ -6,6 +6,7 @@
   --gold-brighter: #f5cf53;
   --background-gold: #df9d2c45;
   --background-gold-lighter: #e9c53677;
+  --background-gold-lightest: #e9c53648;
   --red: #941e1c;
   --background-red: #65080721;
   --dark-red: #4b0504;
@@ -14,6 +15,8 @@
   --white: #fff;
   --transparent-white: #fff2;
   --black: #1c1c1c;
+  --transparent-black: #1c1c1c88;
+  --transparent-black-darker: #1c1c1cb4;
   --off-white: #ffffffe7;
 }
 
@@ -129,6 +132,7 @@ a {
   font-weight: 400;
   text-decoration: none;
   transition: box-shadow 0.4s, color 0.4s;
+  -webkit-transition: box-shadow 0.4s, color 0.4s;
   cursor: pointer;
 }
 
@@ -152,6 +156,37 @@ hr {
   height: 1px;
   background: var(--gold);
   border: none;
+}
+
+/* Shared Scroll Down */
+
+.scroll-down {
+  display: flex;
+  height: 48px;
+  border-radius: 30px;
+  background: var(--transparent-white);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s, background 0.4s;
+  -webkit-transition: transform 0.4s, background 0.4s;
+  color: var(--off-white);
+}
+
+.scroll-down:hover {
+  transform: translate(-50%, 4px) !important;
+  background: var(--background-gold);
+}
+
+.scroll-down .material-symbols-outlined {
+  padding: 25px 0px 0 10px;
+  font-size: 38px !important;
+  line-height: 0px;
+}
+
+.scroll-down .scroll-down-text {
+  min-width: 118px;
+  padding: 14px 14px 0 0;
+  font-weight: 600;
 }
 
 /* Main Container */
@@ -182,7 +217,6 @@ hr {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
-  align-items: flex-end;
   background: #0003;
   background: linear-gradient(0deg, #000a 0%, #0000 100%);
 }
@@ -214,6 +248,7 @@ hr {
   filter: opacity(0);
   box-shadow: inset -80px 0 90px #0004;
   transition: filter 0.4s, background 0.4s;
+  -webkit-transition: filter 0.4s, background 0.4s;
 }
 
 .content .slideshow .slideshow-images .slideshow-image#intro_engagement {
@@ -264,6 +299,21 @@ hr {
 .content .slideshow .slideshow-images .slideshow-image#qa_2 {
   background-image: url(./img/qa_2.jpg);
 }
+
+.content .slideshow .scroll-down {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--transparent-black);
+}
+
+.content .slideshow .scroll-down:hover {
+  background: var(--transparent-black-darker);
+}
+
+/* Sidebar */
 
 .content .sidebar {
   position: fixed;
@@ -322,24 +372,6 @@ section#intro .scroll-down {
   bottom: 54px;
   left: 50%;
   transform: translateX(-50%);
-  width: 48px;
-  height: 48px;
-  padding: 24px 0;
-  border-radius: 30px;
-  background: var(--transparent-white);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.4s, background 0.4s;
-}
-
-section#intro .scroll-down:hover {
-  background: var(--background-gold);
-  transform: translate(-50%, 4px);
-}
-
-section#intro .scroll-down .material-symbols-outlined {
-  font-size: 38px !important;
-  line-height: 0px;
 }
 
 
@@ -380,7 +412,7 @@ section#tour-dates .tour-dates .tour-date {
   background: var(--red);
   /* border: 7px solid var(--background-light-red);
   outline: 1px solid var(--red); */
-  border-radius: 4px;
+  border-radius: 2px;
   color: var(--white);
 }
 
@@ -433,6 +465,7 @@ section#tour-dates .tour-dates .tour-date .see-more-link {
   font-weight: 400;
   text-decoration: none;
   transition: color 0.4s, opacity 0.8s;
+  -webkit-transition: color 0.4s, opacity 0.8s;
   cursor: pointer;
 }
 
@@ -443,6 +476,7 @@ section#tour-dates .tour-dates .tour-date .see-more-link:hover {
 section#tour-dates .tour-dates .tour-date .see-more-link .text {
   box-shadow: inset 0 -6px var(--background-gold);
   transition: box-shadow 0.4s;
+  -webkit-transition: box-shadow 0.4s;
 }
 
 section#tour-dates .tour-dates .tour-date .see-more-link:hover .text {
@@ -453,10 +487,12 @@ section#tour-dates .tour-dates .tour-date .see-more-link .spacer {
   display: inline-block;
   width: 6px;
   transition: width 0.4s;
+  -webkit-transition: width 0.4s;
 }
 
 section#tour-dates .tour-dates .tour-date .see-more-link:hover .spacer {
   width: 10px;
+  padding: 0;
 }
 
 section#tour-dates .tour-dates .tour-date .see-more {
@@ -464,6 +500,7 @@ section#tour-dates .tour-dates .tour-date .see-more {
   max-height: 0;
   overflow: hidden;
   transition: max-height 1.4s;
+  -webkit-transition: max-height 1.4s;
 }
 
 section#tour-dates .tour-dates .tour-date .button-row {
@@ -486,6 +523,7 @@ section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.4s, color 0.4s, border 0.4s;
+  -webkit-transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
 section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button:hover {
@@ -503,8 +541,12 @@ section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button .text {
 section#footer {
   border-top: 8px solid var(--gold);
   background: var(--dark-red);
-  height: 18px;
-  margin-top: 42px;
+}
+
+section#footer .author {
+  padding: 0;
+  text-align: center;
+  color: var(--background-gold-lightest);
 }
 
 /* Mobile */
@@ -517,6 +559,20 @@ section#footer {
   
   .content .slideshow {
     width: 100%;
+  }
+
+  .content .slideshow .title {
+    top: 0;
+    transform: translateY(0);
+    height: 50%;
+    width: 100%;
+    align-content: flex-start;
+    background: #0003;
+    background: linear-gradient(180deg, #000a 0%, #0000 100%);
+  }
+
+  .content .slideshow .scroll-down {
+    display: flex;
   }
 
   .content .slideshow .slideshow-images .slideshow-image {

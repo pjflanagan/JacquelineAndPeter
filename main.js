@@ -36,7 +36,8 @@ function setAutoSlideshow() {
   autoSlideshowInterval = setInterval(() => {
     $('.slideshow-image').css({
       filter: `opacity(0)`,
-      transition: `filter 1.2s`
+      transition: `filter 1.2s`,
+      webkitTransition: `filter 1.2s`
     });
     $(allSlides[i % allSlides.length]).css({
       filter: `opacity(1)`
@@ -71,12 +72,13 @@ function setScrollingSlideshow() {
 
     // if we found a closest element, then set the background to what it says
     if (closestElement) {
-      const slide = $(closestElement).attr('data-slide');
+      const activeSlide = $(closestElement).attr('data-slide');
       $('.slideshow-image').css({
         filter: `opacity(0)`,
-        transition: `filter 0.4s`
+        transition: `filter 0.4s`,
+        webkitTransition: `filter 0.4s`
       });
-      $(`.slideshow-image#${slide}`).css({
+      $(`.slideshow-image#${activeSlide}`).css({
         filter: `opacity(1)`
       });
     }
