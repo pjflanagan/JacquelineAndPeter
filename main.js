@@ -39,12 +39,12 @@ function setAutoSlideshow() {
   const allSlides = $('.slideshow-image');
   autoSlideshowInterval = setInterval(() => {
     $('.slideshow-image').css({
-      filter: `opacity(0)`,
-      transition: `filter 1.2s`,
-      webkitTransition: `filter 1.2s`
+      opacity: 0,
+      transition: `opacity 1.2s`,
+      webkitTransition: `opacity 1.2s`
     });
     $(allSlides[i % allSlides.length]).css({
-      filter: `opacity(1)`
+      opacity: `1`
     });
     ++i;
   }, 4800);
@@ -78,12 +78,12 @@ function setScrollingSlideshow() {
     if (closestElement) {
       const activeSlide = $(closestElement).attr('data-slide');
       $('.slideshow-image').css({
-        filter: `opacity(0)`,
-        transition: `filter 0.4s`,
-        webkitTransition: `filter 0.4s`
+        opacity: 0,
+        transition: `opacity 0.4s`,
+        webkitTransition: `opacity 0.4s`
       });
       $(`.slideshow-image#${activeSlide}`).css({
-        filter: `opacity(1)`
+        opacity: 1
       });
     }
   });
