@@ -203,6 +203,7 @@ hr {
 
 .content .slideshow {
   position: relative;
+  z-index: 0;
   width: calc(54% + 30px);
   height: 100%;
   color: var(--white);
@@ -320,11 +321,12 @@ hr {
 
 .content .sidebar {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 54%;
   width: 46%;
   height: 100%;
-  background: var(--background-light-red);
+  background: var(--darker-red);
   overflow-y: scroll;
   box-shadow: 0 0 180px #0008;
   clip-path: polygon(
@@ -380,6 +382,10 @@ section#intro .scroll-down {
 
 /* Story */
 
+section#our-story {
+  background: var(--background-light-red);
+}
+
 section#our-story .timeline-event {
   margin: 18px 0;
 }
@@ -399,6 +405,7 @@ section#event-description .icon-holder .material-symbols-outlined {
 /* Dates */
 
 section#tour-dates {
+  background: var(--background-light-red);
 }
 
 section#tour-dates .tour-dates {
@@ -539,11 +546,31 @@ section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button .text {
   padding: 3px 0 0 8px;
 }
 
+/* Q & A */
+
+section#faq {
+  background: var(--background-light-red);
+}
+
+/* Contact */
+
+section#contact {
+  background: var(--background-light-red);
+  margin-bottom: 80px;
+  border-bottom: 8px solid var(--gold);
+}
+
 /* Footer */
 
 section#footer {
-  border-top: 8px solid var(--gold);
-  background: var(--dark-red);
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  box-sizing: border-box;
+  width: 46%;
+  height: 80px;
+  padding: 28px;
+  background: var(--darker-red);
 }
 
 section#footer .author {
@@ -562,6 +589,7 @@ section#footer .author {
   
   .content .slideshow {
     width: 100%;
+    z-index: 2;
   }
 
   .content .slideshow .title {
@@ -606,6 +634,10 @@ section#footer .author {
   
   section#intro .icon-holder {
     margin: 0;
+  }
+
+  section#footer {
+    width: 100%;
   }
 }
 
