@@ -107,6 +107,7 @@ p {
 }
 
 b {
+  display: contents;
   white-space: nowrap;
   color: var(--gold);
 }
@@ -123,12 +124,35 @@ ul {
 
 ul li {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   padding: 0 0 6px 8px;
 }
 
 ul li::marker {
   color: var(--gold);
+}
+
+ul.icon, ul.time {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+ul.icon li, ul.time li {
+  display: flex;
+  padding: 8px 0;
+}
+
+
+ul.icon li span.material-symbols-outlined,
+ul.time li span.time {
+  margin: 0px 14px 0 6px;
+  color: var(--gold);
+}
+
+ul.time li span.time {
+  min-width: 60px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 a {
@@ -587,7 +611,7 @@ section#footer .author {
   color: var(--background-gold-lightest);
 }
 
-/* Mobile */
+/* Tablet */
 
 @media screen and (max-width: 780px)  {
   .content {
@@ -646,6 +670,18 @@ section#footer .author {
 
   section#footer {
     width: 100%;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 460px)  {
+  section {
+    padding: 24px;
+  }
+
+  section#tour-dates .tour-dates .tour-date {
+    padding: 14px;
   }
 }
 
