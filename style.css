@@ -383,6 +383,13 @@ section#intro .intro-content {
   transform: translateY(-50%);
 }
 
+section#intro img.logo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 0 12px;
+}
+
 section#intro .intro-content .icon-holder {
   margin: 0 0 24px;
   padding: 0;
@@ -685,7 +692,7 @@ section#footer .author {
   }
 }
 
-@media screen and (max-height: 612px)  {
+@media screen and (max-height: 788px)  {
   section#intro .scroll-down {
     visibility: hidden;
   }
