@@ -376,7 +376,7 @@ section#intro {
   background: var(--red);
   background-image: url(./img/bg/bg-pattern.png);
   background-repeat: repeat;
-  background-size: 50%;
+  background-size: 264px;
   color: var(--white);
 }
 
