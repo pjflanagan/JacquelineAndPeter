@@ -20,14 +20,18 @@ function scrollToId(id) {
 }
 
 function seeMore(date) {
-  $(`#see-more_${date}`).css({
-    height: 'auto',
-    maxHeight: '2000px', // if there is ever a cut off, then increase this
-  });
+  $(`#see-more_${date}`).addClass('open');
   $(`#see-more-link_${date}`).css({
     opacity: 0,
     pointerEvents: 'none'
   });
+}
+
+function translateSection(date, [defaultLang, secondaryLang]) {
+  const isCurrentlyDefault = !$(`.translatable.t-${date}-${defaultLang}`).first().hasClass('hidden');
+  const [addLang, removeLang] = isCurrentlyDefault ? [secondaryLang, defaultLang] : [defaultLang, secondaryLang];
+  $(`.translatable.t-${date}-${addLang}`).removeClass('hidden').addClass('visible');
+  $(`.translatable.t-${date}-${removeLang}`).removeClass('visible').addClass('hidden');
 }
 
 let slideshowType;
@@ -97,7 +101,7 @@ function setSlideshowTypeFromScreenSize() {
     setAutoSlideshow();
   } else if (pageWidth > BREAKPOINT && slideshowType !== 'scroll') {
     slideshowType = 'scroll';
-    clearInterval(autoSlideshowInterval);  
+    clearInterval(autoSlideshowInterval);
     setScrollingSlideshow();
   }
 }

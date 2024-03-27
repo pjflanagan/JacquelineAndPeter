@@ -197,6 +197,29 @@ span.pill {
   color: var(--off-white);
 }
 
+.translatable {
+  display: inline;
+  transition: background 0.8s;
+}
+
+.translatable.hidden {
+  display: none;
+}
+
+@keyframes background-flash {
+  0% {
+    background: var(--background-gold);
+  }
+  100% {
+    background: #fff0;
+  }
+}
+
+.translatable.visible {
+  display: inline;
+  animation: background-flash 0.8s forwards;
+}
+
 /* Shared Scroll Down */
 
 .scroll-down {
@@ -515,7 +538,7 @@ section#tour-dates .tour-dates .tour-date .tour-date-header .date h4 {
   color: var(--white);
 }
 
-section#tour-dates .tour-dates .tour-date .see-more-link {
+section#tour-dates .tour-dates .tour-date .action-link {
   opacity: 1;
   color: var(--gold);
   font-weight: 400;
@@ -525,38 +548,48 @@ section#tour-dates .tour-dates .tour-date .see-more-link {
   cursor: pointer;
 }
 
-section#tour-dates .tour-dates .tour-date .see-more-link:hover {
+section#tour-dates .tour-dates .tour-date .action-link:hover {
   color: var(--gold-brighter);
 }
 
-section#tour-dates .tour-dates .tour-date .see-more-link .text {
+section#tour-dates .tour-dates .tour-date .action-link .text {
   box-shadow: inset 0 -6px var(--background-gold);
   transition: box-shadow 0.4s;
   -webkit-transition: box-shadow 0.4s;
 }
 
-section#tour-dates .tour-dates .tour-date .see-more-link:hover .text {
+section#tour-dates .tour-dates .tour-date .action-link:hover .text {
   box-shadow: inset 0 -10px var(--background-gold);
 }
 
-section#tour-dates .tour-dates .tour-date .see-more-link .spacer {
+section#tour-dates .tour-dates .tour-date .action-link .spacer {
   display: inline-block;
   width: 6px;
   transition: width 0.4s;
   -webkit-transition: width 0.4s;
 }
 
-section#tour-dates .tour-dates .tour-date .see-more-link:hover .spacer {
+section#tour-dates .tour-dates .tour-date .action-link:hover .spacer {
   width: 10px;
   padding: 0;
 }
 
-section#tour-dates .tour-dates .tour-date .see-more {
+section#tour-dates .tour-dates .tour-date .expandable {
   height: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1.4s;
   -webkit-transition: max-height 1.4s;
+}
+
+section#tour-dates .tour-dates .tour-date .expandable.open {
+  height: auto;
+  max-height: 2000px;
+}
+
+section#tour-dates .tour-dates .tour-date .expandable.closed {
+  height: 0;
+  max-height: 0;
 }
 
 section#tour-dates .tour-dates .tour-date .button-row {
