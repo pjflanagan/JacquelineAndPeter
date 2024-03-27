@@ -17,6 +17,7 @@
   --black: #1c1c1c;
   --transparent-black: #1c1c1c88;
   --transparent-black-darker: #1c1c1cb4;
+  --transparenter-black: #1c1c1c34;
   --off-white: #ffffffe7;
   --gold-gradient: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #d49e27 30%, #cda11d 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #f5f2a8 0%, #FFFFAC 8%, #D1B464 25%, #be9d13 62.5%, #baa316 100%);
 }
@@ -186,6 +187,14 @@ hr {
   height: 1px;
   background: var(--gold);
   border: none;
+}
+
+span.optional {
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  background: var(--transparenter-black);
+  color: var(--off-white);
 }
 
 /* Shared Scroll Down */
