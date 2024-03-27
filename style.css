@@ -189,8 +189,8 @@ hr {
   border: none;
 }
 
-span.optional {
-  padding: 2px 4px;
+span.pill {
+  padding: 2px 6px;
   border-radius: 2px;
   font-size: 12px;
   background: var(--transparenter-black);
