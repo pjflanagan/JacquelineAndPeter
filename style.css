@@ -560,8 +560,9 @@ section#tour-dates .tour-dates .tour-date .button-row a {
   box-shadow: none;
 }
 
-section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button {
+section#tour-dates .tour-dates .tour-date .button-row a .button {
   display: flex;
+  margin: 0 3px;
   width: fit-content;
   padding: 14px 24px;
   border: 3px solid var(--gold);
@@ -573,13 +574,13 @@ section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button {
   -webkit-transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
-section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button:hover {
+section#tour-dates .tour-dates .tour-date .button-row a .button:hover {
   background: var(--background-gold-lighter);
   border: 3px solid var(--gold-brighter);
   color: var(--white);
 }
 
-section#tour-dates .tour-dates .tour-date .button-row a .rsvp-button .text {
+section#tour-dates .tour-dates .tour-date .button-row a .button .text {
   padding: 3px 0 0 8px;
 }
 
