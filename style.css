@@ -397,6 +397,12 @@ span.pill {
     0 calc(50% - 14px),
     0% 0%
   );
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.content .sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Intro */
@@ -670,6 +676,7 @@ section#footer .author {
   .content {
     display: flex;
     flex-wrap: wrap;
+    overflow-x: hidden;
   }
   
   .content .slideshow {
