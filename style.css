@@ -151,7 +151,7 @@ ul.time li span.time {
 }
 
 ul.time li span.time {
-  min-width: 60px;
+  min-width: 68px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -491,7 +491,7 @@ section#tour-dates .tour-dates {
 section#tour-dates .tour-dates .tour-date {
   margin: 24px auto;
   width: 100%;
-  max-width: 520px;
+  max-width: 580px;
   min-height: 120px;
   padding: 28px;
   background: var(--red);
