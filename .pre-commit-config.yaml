@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: cachebreaker
+        name: cachebreaker
+        entry: ./cachebreaker/run.sh
+        language: python
+        files: '(\.html|\.css|\.js)'
