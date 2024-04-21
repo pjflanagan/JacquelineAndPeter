@@ -73,7 +73,6 @@ function setScrollingSlideshow() {
         closestElementScrollDistance = Math.abs(scrollDistance);
         closestElement = this;
       }
-
     });
 
     // if we found a closest element, then set the background to what it says
