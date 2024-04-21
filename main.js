@@ -1,5 +1,5 @@
 
-const BREAKPOINT = 780;
+const BREAKPOINT = 788;
 
 function scrollToId(id) {
   const pageCenterY = $(window).innerHeight() / 2;

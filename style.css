@@ -747,6 +747,7 @@ section#footer .author {
   }
 }
 
+/* NOTE: if you change this, match it with the BREAKPOINT variable in main.js */
 @media screen and (max-height: 788px)  {
   section#intro .scroll-down {
     visibility: hidden;
