@@ -34,8 +34,6 @@ function translateSection(date, [defaultLang, secondaryLang]) {
   $(`.translatable.t-${date}-${removeLang}`).removeClass('visible').addClass('hidden');
 }
 
-let slideshowType;
-
 let autoSlideshowInterval;
 function setAutoSlideshow() {
   clearInterval(autoSlideshowInterval);
@@ -92,6 +90,8 @@ function setScrollingSlideshow() {
     }
   });
 }
+
+let slideshowType;
 
 function setSlideshowTypeFromScreenSize() {
   const pageWidth = $(window).innerWidth();
