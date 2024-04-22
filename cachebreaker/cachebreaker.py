@@ -1,6 +1,13 @@
 
+# python3 ./cachebreaker/cachebreaker.py
+
 import re
 from datetime import datetime
+from git import Repo
+
+# find the changes that are relevant
+repo = Repo(".")
+stagedFiles = [item.a_path for item in repo.index.diff("HEAD")]
 
 CACHEBREAKER_REGEX = r"cacheBreaker=(\d{4}\.\d{2}\.\d{2})"
 
@@ -13,10 +20,17 @@ indexFile = open('./index.html', 'r')
 lines = indexFile.readlines()
 indexFile.close()
 
+def isUpdateableLine(line):
+  if "cacheBreaker" in line:
+    for file in stagedFiles:
+      if file in line:
+        return True
+  return False
+
 # edit
 editedLines = 0
 for i in range(0, len(lines)):
-  if "cacheBreaker" in lines[i]:
+  if isUpdateableLine(lines[i]):
     editedLines += 1
     lines[i] = re.sub(CACHEBREAKER_REGEX, newCacheMarker, lines[i])
     print(lines[i])

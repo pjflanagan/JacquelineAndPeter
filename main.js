@@ -1,6 +1,8 @@
 
 const BREAKPOINT = 788;
 
+// Scroll To
+
 function scrollToId(id) {
   const pageCenterY = $(window).innerHeight() / 2;
   const pageWidth = $(window).innerWidth();
@@ -19,6 +21,8 @@ function scrollToId(id) {
   }
 }
 
+// See More
+
 function seeMore(date) {
   $(`#see-more_${date}`).addClass('open');
   $(`#see-more-link_${date}`).css({
@@ -27,12 +31,16 @@ function seeMore(date) {
   });
 }
 
+// Translate 
+
 function translateSection(date, [defaultLang, secondaryLang]) {
   const isCurrentlyDefault = !$(`.translatable.t-${date}-${defaultLang}`).first().hasClass('hidden');
   const [addLang, removeLang] = isCurrentlyDefault ? [secondaryLang, defaultLang] : [defaultLang, secondaryLang];
   $(`.translatable.t-${date}-${addLang}`).removeClass('hidden').addClass('visible');
   $(`.translatable.t-${date}-${removeLang}`).removeClass('visible').addClass('hidden');
 }
+
+// Slideshow
 
 let autoSlideshowInterval;
 function setAutoSlideshow() {
@@ -104,6 +112,8 @@ function setSlideshowTypeFromScreenSize() {
     setScrollingSlideshow();
   }
 }
+
+// Main
 
 (function () {
   setSlideshowTypeFromScreenSize();
