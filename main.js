@@ -99,7 +99,6 @@ function setScrollingSlideshow() {
 }
 
 let slideshowType;
-
 function setSlideshowTypeFromScreenSize() {
   const pageWidth = $(window).innerWidth();
   if (pageWidth <= BREAKPOINT && slideshowType !== 'auto') {

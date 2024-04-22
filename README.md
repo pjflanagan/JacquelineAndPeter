@@ -3,15 +3,20 @@
 
 This website is our wedding website. 
 
-## Notes
 
-I think I would like for this project to be a jumping off point for some simpler web development projects.
+## Setup
 
-- HTML
-- SCSS
-- jQuery / Vanilla JS
+```shell
+pip3 install GitPython
+```
 
-Using this as a template I could build all sorts of other cool websites.
-- Infographics
-- Restaurant menu pages
-- Project info pages
+## Pre Commit
+
+If you modify `style.css` or `main.js`.
+
+1. Stage the changes
+2. Run to update cache and stage `index.html`
+
+```shell
+python3 cachebreaker.py
+```

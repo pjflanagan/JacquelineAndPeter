@@ -6,12 +6,12 @@ from datetime import datetime
 from git import Repo
 
 # find the changes that are relevant
-repo = Repo(".")
+repo = Repo()
 stagedFiles = [item.a_path for item in repo.index.diff("HEAD")]
-
-CACHEBREAKER_REGEX = r"cacheBreaker=(\d{4}\.\d{2}\.\d{2})"
+print(len(stagedFiles), "staged changes")
 
 # create new marker
+CACHEBREAKER_REGEX = r"cacheBreaker=\d{4}\.\d{2}\.\d{2}"
 newCacheMarker = "cacheBreaker=" + datetime.today().strftime("%Y.%m.%d")
 print("Using cache breaker:", newCacheMarker)
 
@@ -41,3 +41,7 @@ indexFile.writelines(lines)
 indexFile.close()
 
 print("Updated", editedLines, "lines with new cache breaker")
+
+# add to git
+repo.index.add('index.html')
+print("Staged index.html")
