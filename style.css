@@ -8,6 +8,7 @@
   --background-gold-lighter: #e9c53677;
   --background-gold-lightest: #e9c53648;
   --red: #941e1c;
+  --slightly-dark-red: #7c100e;
   --background-red: #65080721;
   --dark-red: #4b0504;
   --darker-red: #340302;
@@ -206,6 +207,52 @@ span.pill {
 
 .translatable.hidden {
   display: none;
+}
+
+/* Button Row */
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 18px;
+}
+
+.button-row a {
+  box-shadow: none;
+}
+
+.button-row a .button {
+  display: flex;
+  margin: 0 3px;
+  width: fit-content;
+  padding: 14px 24px;
+  border: 3px solid var(--gold);
+  background: var(--background-gold);
+  color: var(--background-light-red);
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.4s, color 0.4s, border 0.4s;
+  -webkit-transition: background 0.4s, color 0.4s, border 0.4s;
+}
+
+.button-row.dark a .button {
+  border: 3px solid var(--slightly-dark-red);
+  background: var(--red);
+}
+
+.button-row a .button:hover {
+  background: var(--background-gold-lighter);
+  border: 3px solid var(--gold-brighter);
+  color: var(--white);
+}
+
+.button-row.dark a .button:hover {
+  background: var(--dark-red);
+  border: 3px solid var(--darker-red);
+}
+
+.button-row a .button .text {
+  padding: 3px 0 0 8px;
 }
 
 @keyframes background-flash {
@@ -598,40 +645,6 @@ section#tour-dates .tour-dates .tour-date .expandable.open {
 section#tour-dates .tour-dates .tour-date .expandable.closed {
   height: 0;
   max-height: 0;
-}
-
-section#tour-dates .tour-dates .tour-date .button-row {
-  display: flex;
-  justify-content: center;
-  padding: 12px 0 18px;
-}
-
-section#tour-dates .tour-dates .tour-date .button-row a {
-  box-shadow: none;
-}
-
-section#tour-dates .tour-dates .tour-date .button-row a .button {
-  display: flex;
-  margin: 0 3px;
-  width: fit-content;
-  padding: 14px 24px;
-  border: 3px solid var(--gold);
-  background: var(--background-gold);
-  color: var(--background-light-red);
-  font-weight: 400;
-  cursor: pointer;
-  transition: background 0.4s, color 0.4s, border 0.4s;
-  -webkit-transition: background 0.4s, color 0.4s, border 0.4s;
-}
-
-section#tour-dates .tour-dates .tour-date .button-row a .button:hover {
-  background: var(--background-gold-lighter);
-  border: 3px solid var(--gold-brighter);
-  color: var(--white);
-}
-
-section#tour-dates .tour-dates .tour-date .button-row a .button .text {
-  padding: 3px 0 0 8px;
 }
 
 /* Q & A */
