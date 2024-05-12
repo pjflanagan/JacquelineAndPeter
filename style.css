@@ -368,6 +368,10 @@ span.pill {
   opacity: 1;
 }
 
+.content .slideshow .slideshow-images .slideshow-image#photos {
+  background-image: url(./img/photos.jpg);
+}
+
 .content .slideshow .slideshow-images .slideshow-image#story_times-square {
   background-image: url(./img/story_times-square.jpg);
 }
