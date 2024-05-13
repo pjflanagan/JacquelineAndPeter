@@ -1,5 +1,5 @@
 
-# python3 ./cachebreaker/cachebreaker.py
+# python3 ./cachebreaker.py
 
 import re
 from datetime import datetime

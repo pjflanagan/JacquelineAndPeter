@@ -109,6 +109,16 @@ p {
   max-width: 480px;
 }
 
+p.center {
+  text-align: center;
+}
+
+p.asterisk {
+  font-size: 12px;
+  line-height: 12px;
+  color: #fffc;
+}
+
 b {
   display: contents;
   white-space: nowrap;
