@@ -89,6 +89,7 @@ h3 {
 
 h4 {
   margin: 0 auto;
+  max-width: 480px;
   padding: 12px 0 4px;
   font-size: 18px;
   font-weight: 400;
@@ -534,17 +535,13 @@ section#our-story .timeline-event {
   margin: 18px 0;
 }
 
-section#our-story h3 {
-  margin: 0 10px;
-}
-
 section#our-story h4 {
-  margin: 0 10px;
   color: var(--red);
 }
 
-section#our-story p {
-  margin: 0 10px;
+section#our-story .button-row {
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 /* Event */
