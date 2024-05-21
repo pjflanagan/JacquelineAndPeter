@@ -88,7 +88,7 @@ h3 {
 }
 
 h4 {
-  margin: 0;
+  margin: 0 auto;
   padding: 12px 0 4px;
   font-size: 18px;
   font-weight: 400;
@@ -226,6 +226,11 @@ span.pill {
   flex-wrap: wrap;
   justify-content: center;
   padding: 12px 0 18px;
+}
+
+.button-row.left {
+  justify-content: left;
+  padding: 12px 0 18px 12px;
 }
 
 .button-row a {
@@ -529,6 +534,19 @@ section#our-story .timeline-event {
   margin: 18px 0;
 }
 
+section#our-story h3 {
+  margin: 0 10px;
+}
+
+section#our-story h4 {
+  margin: 0 10px;
+  color: var(--red);
+}
+
+section#our-story p {
+  margin: 0 10px;
+}
+
 /* Event */
 
 section#event-description {
@@ -666,15 +684,16 @@ section#tour-dates .tour-dates .tour-date .expandable.closed {
 
 section#faq {
   background: var(--background-light-red);
+  /* NOTE: if we ever add another section below, move this margin-bottom to that new section */
+  margin-bottom: 80px;
 }
 
 /* Contact */
 
-section#contact {
+/* section#contact {
   background: var(--background-light-red);
-  margin-bottom: 80px;
   border-bottom: 8px solid var(--gold);
-}
+} */
 
 /* Footer */
 
